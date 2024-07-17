@@ -1,0 +1,17 @@
+@import url('../assets/fonts/EuclidCircularA.scss');
+@import url('./variables.scss');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: 'Euclid Circular A';
+}
+
+body,
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  position: relative;
+  font-family: 'Euclid Circular A';
+}
