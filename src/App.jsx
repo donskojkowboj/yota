@@ -1,10 +1,12 @@
+import { HomePage } from './components/pages/HomePage';
+import { Layout } from './components/pagesComponents/Layout/Layout';
 
 function App() {
   return (
-    <>
-      <div>Hello World</div>
-    </>
+    <Layout>
+      <HomePage/>
+    </Layout>
   );
-}
+};
 
 export default App;
