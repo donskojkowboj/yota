@@ -1,16 +1,10 @@
-import './styles/App.scss'
-import qr from './assets/images/qr.png'
-function App() {
 
+function App() {
   return (
     <>
-        <div className="starting-point">
-            Hello World
-          
-        </div>
-        <img className="random-img" src={qr} alt="qr" />
+      <div>Hello World</div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
