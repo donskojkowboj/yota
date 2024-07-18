@@ -1,9 +1,10 @@
-import { Container } from '../Container/Container';
+import { Container } from '../Container/index';
+import styles from './Footer.module.scss';
 
 export const Footer = () => {
   return (
-    <div className="footer">
+    <footer className={styles.footer}>
       <Container>Footer</Container>
-    </div>
+    </footer>
   );
 };

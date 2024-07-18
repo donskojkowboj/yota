@@ -1,9 +1,10 @@
-import { Container } from '../Container/Container';
+import { Container } from '../Container/index';
+import styles from './Header.module.scss';
 
 export const Header = () => {
   return (
-    <div className="header">
+    <header className={styles.header}>
       <Container>Header</Container>
-    </div>
+    </header>
   );
 };
