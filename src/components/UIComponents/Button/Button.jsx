@@ -1,9 +1,5 @@
 import styles from './Button.module.scss';
 
-export const Button = () => {
-  return (
-    <a href="#" className={styles.button}>
-      Заказать SIM-карту
-    </a>
-  );
+export const Button = (props) => {
+  return <button className={styles.button}>{props.children}</button>;
 };

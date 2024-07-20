@@ -1,23 +1,20 @@
-import styles from './HeaderBottomBlock.module.scss';
-import { HeaderContainer } from '../HeaderContainer';
-import { HeaderLogo } from './HeaderLogo/HeaderLogo';
-import { HeaderDropdown } from './HeaderDropdown';
-import { Button } from '../../../../UIComponents/Button/Button';
+import { HeaderLogo } from './HeaderLogo';
+import { HeaderServices } from './HeaderServices';
 import { HeaderAccount } from './HeaderAccount';
+import { Button } from '../../../../UIComponents/Button';
+import styles from './HeaderBottomBlock.module.scss';
 
 export const HeaderBottomBlock = () => {
   return (
     <>
-      <HeaderContainer>
-        <div className={styles.headerbottomblock}>
-          <HeaderLogo />
-          <div className={styles.wrapper}>
-            <HeaderDropdown />
-            <Button />
-            <HeaderAccount />
-          </div>
+      <div className={styles.headerBottomBlock}>
+        <HeaderLogo />
+        <div className={styles.wrapper}>
+          <HeaderServices />
+          <Button>Заказать SIM-карту</Button>
+          <HeaderAccount />
         </div>
-      </HeaderContainer>
+      </div>
     </>
   );
 };

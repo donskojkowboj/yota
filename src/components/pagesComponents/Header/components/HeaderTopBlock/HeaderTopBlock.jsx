@@ -1,21 +1,18 @@
-import styles from './HeaderTopBlock.module.scss';
-import { HeaderContainer } from '../HeaderContainer';
 import { HeaderSelectCity } from './HeaderSelectCity';
-import { HeaderSelectClient } from './HeaderSelectClient/HeaderSelectClient';
-import { HeaderNavBar } from './HeaderNavbar/HeaderNavbar';
+import { HeaderSelectClient } from './HeaderSelectClient';
+import { HeaderNavBar } from './HeaderNavbar';
+import styles from './HeaderTopBlock.module.scss';
 
 export const HeaderTopBlock = () => {
   return (
     <>
-      <HeaderContainer>
-        <div className={styles.headertopblock}>
-          <HeaderSelectCity />
-          <div className={styles.wrapper}>
-            <HeaderSelectClient />
-            <HeaderNavBar />
-          </div>
+      <div className={styles.headerTopBlock}>
+        <HeaderSelectCity />
+        <div className={styles.wrapper}>
+          <HeaderSelectClient />
+          <HeaderNavBar />
         </div>
-      </HeaderContainer>
+      </div>
     </>
   );
 };
