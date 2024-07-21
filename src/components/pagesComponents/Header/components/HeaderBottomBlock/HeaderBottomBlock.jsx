@@ -11,7 +11,11 @@ export const HeaderBottomBlock = () => {
         <HeaderLogo />
         <div className={styles.wrapper}>
           <HeaderServices />
-          <Button>Заказать SIM-карту</Button>
+          <Button
+            label="Заказать SIM-карту"
+            backgroundColor="#00AEEF"
+            color="#FFF"
+          />
           <HeaderAccount />
         </div>
       </div>
