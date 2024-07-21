@@ -1,5 +1,5 @@
 import { UserIcon } from './UserIcon';
-import { DropdownIcon } from './DropdownIcon';
-import { Logo } from './Logo';
+import { ArrowBottomIcon } from './ArrowBottomIcon';
+import { LogoIcon } from './LogoIcon';
 
-export { UserIcon, DropdownIcon, Logo };
+export { UserIcon, ArrowBottomIcon, LogoIcon };

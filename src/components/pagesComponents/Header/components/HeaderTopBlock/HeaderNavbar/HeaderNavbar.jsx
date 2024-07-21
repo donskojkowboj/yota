@@ -1,6 +1,6 @@
 import styles from './HeaderNavbar.module.scss';
 
-export const HeaderNavBar = () => {
+export const HeaderNavbar = () => {
   return (
     <nav className={styles.headerNavbar}>
       <ul className={styles.navbarList}>

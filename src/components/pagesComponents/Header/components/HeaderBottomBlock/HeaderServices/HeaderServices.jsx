@@ -1,24 +1,24 @@
-import { DropdownIcon } from '../../../../../UIComponents/Icons';
+import { ArrowBottomIcon } from '../../../../../UIComponents/Icons';
 import styles from './HeaderServices.module.scss';
 
 export const HeaderServices = () => {
   return (
-    <div className={styles.menu}>
+    <div className={styles.headerServices}>
       <div className={styles.item}>
         Мобильная связь
-        <DropdownIcon />
+        <ArrowBottomIcon />
       </div>
       <div className={styles.item}>
         Интернет
-        <DropdownIcon />
+        <ArrowBottomIcon />
       </div>
       <div className={styles.item}>
         Сервисы
-        <DropdownIcon />
+        <ArrowBottomIcon />
       </div>
       <div className={styles.item}>
         Интернет-магазин
-        <DropdownIcon />
+        <ArrowBottomIcon />
       </div>
     </div>
   );

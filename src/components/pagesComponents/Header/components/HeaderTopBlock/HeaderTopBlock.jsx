@@ -1,6 +1,6 @@
 import { HeaderSelectCity } from './HeaderSelectCity';
 import { HeaderSelectClient } from './HeaderSelectClient';
-import { HeaderNavBar } from './HeaderNavbar';
+import { HeaderNavbar } from './HeaderNavbar';
 import styles from './HeaderTopBlock.module.scss';
 
 export const HeaderTopBlock = () => {
@@ -10,7 +10,7 @@ export const HeaderTopBlock = () => {
         <HeaderSelectCity />
         <div className={styles.wrapper}>
           <HeaderSelectClient />
-          <HeaderNavBar />
+          <HeaderNavbar />
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import { UserIcon, DropdownIcon } from '../../../../../UIComponents/Icons';
+import { UserIcon, ArrowBottomIcon } from '../../../../../UIComponents/Icons';
 import styles from './HeaderAccount.module.scss';
 
 export const HeaderAccount = () => {
@@ -6,7 +6,7 @@ export const HeaderAccount = () => {
     <div className={styles.headerAccount}>
       <UserIcon />
       Личный кабинет
-      <DropdownIcon />
+      <ArrowBottomIcon />
     </div>
   );
 };
