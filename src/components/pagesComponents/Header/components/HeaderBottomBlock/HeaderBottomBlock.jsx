@@ -5,17 +5,17 @@ import { Button } from '../../../../UIComponents/Button';
 import styles from './HeaderBottomBlock.module.scss';
 
 export const HeaderBottomBlock = () => {
+  const handleClick = () => {
+    console.log('Проверка кнопки');
+  };
+
   return (
     <>
       <div className={styles.headerBottomBlock}>
         <HeaderLogo />
         <div className={styles.wrapper}>
           <HeaderServices />
-          <Button
-            label="Заказать SIM-карту"
-            backgroundColor="#00AEEF"
-            color="#FFF"
-          />
+          <Button onClick={() => handleClick()}>Заказать SIM-карту</Button>
           <HeaderAccount />
         </div>
       </div>
