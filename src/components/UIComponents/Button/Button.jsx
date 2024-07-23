@@ -2,12 +2,13 @@ import styles from './Button.module.scss';
 
 export const Button = ({
   variant = 'blue',
-  size = 'large',
+  size = 'medium',
   iconLeft,
   iconRight,
   onClick,
   additionalClassname = '',
   children,
+  ...rest
 }) => {
   const createButtonVariantClassname = () => {
     switch (variant) {
@@ -17,7 +18,7 @@ export const Button = ({
         return styles.white;
       case 'outline':
         return styles.outline;
-      case 'outlineDark':
+      case 'outline-dark':
         return styles.outlineDark;
       case 'clear':
       default:
@@ -26,9 +27,10 @@ export const Button = ({
   };
 
   const createButtonSize = () => {
+    if (variant === 'clear') {
+      return '';
+    }
     switch (size) {
-      case 'large':
-        return styles.large;
       case 'medium':
         return styles.medium;
       case 'small':
@@ -38,7 +40,7 @@ export const Button = ({
   const buttonClassname = `${styles.button} ${createButtonSize()} ${createButtonVariantClassname()} ${additionalClassname}`;
 
   return (
-    <button className={buttonClassname} onClick={onClick}>
+    <button className={buttonClassname} onClick={onClick} {...rest}>
       {iconLeft && <iconLeft />}
       {children}
       {iconRight && <iconRight />}

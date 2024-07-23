@@ -3,6 +3,7 @@
   border: 1px solid transparent;
   font-size: 16px;
   line-height: 14px;
+  transition: all 0.3s ease;
 }
 
 .button {
@@ -10,21 +11,14 @@
   border: none;
   color: #434c5d;
   cursor: pointer;
-  &:hover {
-    scale: 1.01;
-  }
-}
-
-.large {
-  padding: 16px 43px;
 }
 
 .medium {
-  padding: 10px 32px;
+  padding: 16px 43px;
 }
 
 .small {
-  padding: 0;
+  padding: 10px 32px;
 }
 
 .blue {
@@ -32,8 +26,8 @@
   background-color: #00aeef;
   color: #ffffff;
   &:hover {
-    scale: 1.01;
     background-color: #0080b3;
+    color: #e0e0e0;
   }
 }
 
@@ -43,6 +37,7 @@
   color: #00aeef;
   &:hover {
     background-color: #e6e6e6;
+    color: #434c5d;
   }
 }
 
@@ -52,6 +47,8 @@
   color: #00aeef;
   &:hover {
     background-color: #e6e6e6;
+    border-color: #0080b3;
+    color: #0080b3;
   }
 }
 
@@ -61,5 +58,7 @@
   color: #434c5d;
   &:hover {
     background-color: #e6e6e6;
+    color: #6b7484;
+    border-color: #6b7484;
   }
 }
