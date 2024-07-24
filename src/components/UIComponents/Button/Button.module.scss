@@ -1,6 +1,6 @@
 @mixin baseButton {
   border-radius: 100px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   font-size: 16px;
   line-height: 14px;
   transition: all 0.3s ease;
@@ -14,17 +14,18 @@
 }
 
 .medium {
-  padding: 16px 43px;
+  padding: 15px 43px;
 }
 
 .small {
-  padding: 10px 32px;
+  padding: 12px 30px;
 }
 
 .blue {
   @include baseButton;
   background-color: #00aeef;
   color: #ffffff;
+
   &:hover {
     background-color: #0080b3;
     color: #e0e0e0;
@@ -35,6 +36,7 @@
   @include baseButton;
   background-color: #ffffff;
   color: #00aeef;
+
   &:hover {
     background-color: #e6e6e6;
     color: #434c5d;
@@ -43,8 +45,9 @@
 
 .outline {
   @include baseButton;
-  border: 2px solid #00aeef;
+  border-color: #00aeef;
   color: #00aeef;
+
   &:hover {
     background-color: #e6e6e6;
     border-color: #0080b3;
@@ -54,8 +57,9 @@
 
 .outlineDark {
   @include baseButton;
-  border: 2px solid #434c5d;
+  border-color: #434c5d;
   color: #434c5d;
+
   &:hover {
     background-color: #e6e6e6;
     color: #6b7484;
