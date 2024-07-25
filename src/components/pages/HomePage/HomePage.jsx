@@ -5,31 +5,31 @@ export const HomePage = () => {
   return (
     <div className={styles.homepage}>
       HomePage
-      <div>
-        <Button variant="blue">Оплатить</Button>
+      <div style={{ alignItems: 'center' }}>
+        <Button variant="blue">Заказать SIM-карту</Button>
         <Button size="small" variant="blue">
-          Оплатить
+          Купить
         </Button>
       </div>
-      <div>
+      <div style={{ alignItems: 'center' }}>
         <Button variant="white">Оплатить</Button>
         <Button size="small" variant="white">
           Оплатить
         </Button>
       </div>
-      <div>
+      <div style={{ alignItems: 'center' }}>
         <Button variant="outline">Создать</Button>
         <Button size="small" variant="outline">
           Создать
         </Button>
       </div>
-      <div>
+      <div style={{ alignItems: 'center' }}>
         <Button variant="outline-dark">Подробнее</Button>
         <Button size="small" variant="outline-dark">
           Подробнее
         </Button>
       </div>
-      <div>
+      <div style={{ alignItems: 'center' }}>
         <Button variant="clear">Сервисы</Button>
         <Button variant="clear" additionalClassname={styles.clearBlue}>
           Оплатить

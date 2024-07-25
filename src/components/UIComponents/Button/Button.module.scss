@@ -2,7 +2,7 @@
   border-radius: 100px;
   border: 2px solid transparent;
   font-size: 16px;
-  line-height: 14px;
+  line-height: 1.37;
   transition: all 0.3s ease;
 }
 
@@ -11,14 +11,17 @@
   border: none;
   color: #434c5d;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .medium {
-  padding: 15px 43px;
+  padding: 14px 35px;
 }
 
 .small {
-  padding: 12px 30px;
+  padding: 8px 30px;
 }
 
 .blue {

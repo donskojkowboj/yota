@@ -1,3 +1,4 @@
+import { UserIcon } from '../Icons';
 import styles from './Button.module.scss';
 
 export const Button = ({
@@ -41,9 +42,9 @@ export const Button = ({
 
   return (
     <button className={buttonClassname} onClick={onClick} {...rest}>
-      {iconLeft && <iconLeft />}
+      {iconLeft && iconLeft}
       {children}
-      {iconRight && <iconRight />}
+      {iconRight && iconRight}
     </button>
   );
 };
