@@ -1,2 +1,75 @@
+@mixin baseButton {
+  border-radius: 100px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  line-height: 1.37;
+  transition: all 0.3s ease;
+}
+
 .button {
+  background-color: transparent;
+  border: none;
+  color: #434c5d;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &:hover {
+    color: #00aeef;
+  }
+}
+
+.medium {
+  padding: 14px 35px;
+}
+
+.small {
+  padding: 8px 30px;
+}
+
+.blue {
+  @include baseButton;
+  background-color: #00aeef;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #0080b3;
+    color: #e0e0e0;
+  }
+}
+
+.white {
+  @include baseButton;
+  background-color: #ffffff;
+  color: #00aeef;
+
+  &:hover {
+    background-color: #e6e6e6;
+    color: #434c5d;
+  }
+}
+
+.outline {
+  @include baseButton;
+  border-color: #00aeef;
+  color: #00aeef;
+
+  &:hover {
+    background-color: #e6e6e6;
+    border-color: #0080b3;
+    color: #0080b3;
+  }
+}
+
+.outlineDark {
+  @include baseButton;
+  border-color: #434c5d;
+  color: #434c5d;
+
+  &:hover {
+    background-color: #e6e6e6;
+    color: #6b7484;
+    border-color: #6b7484;
+  }
 }

@@ -1,3 +1,4 @@
+import { Link } from '../../../../../UIComponents/Link';
 import styles from './HeaderNavbar.module.scss';
 
 export const HeaderNavbar = () => {
@@ -5,16 +6,16 @@ export const HeaderNavbar = () => {
     <nav className={styles.headerNavbar}>
       <ul className={styles.navbarList}>
         <li className={styles.navbarItem}>
-          <a href="#">Поддержка</a>
+          <Link>Поддержка</Link>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#">Оплата</a>
+          <Link>Оплата</Link>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#">Карта покрытия</a>
+          <Link>Карта покрытия</Link>
         </li>
         <li className={styles.navbarItem}>
-          <a href="#">Точки продаж</a>
+          <Link>Точки продаж</Link>
         </li>
       </ul>
     </nav>

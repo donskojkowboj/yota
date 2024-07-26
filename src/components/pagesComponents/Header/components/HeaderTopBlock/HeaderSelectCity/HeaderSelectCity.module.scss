@@ -1,3 +1,13 @@
 .headerSelectCity {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  color: #434c5d;
+  border-bottom: #E3E4E7 dashed 1px;
+}
+
+.locationButton {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.42;
+  padding: 0;
 }

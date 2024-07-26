@@ -1,25 +1,40 @@
+import { Button } from '../../../../../UIComponents/Button';
 import { ArrowBottomIcon } from '../../../../../UIComponents/Icons';
 import styles from './HeaderServices.module.scss';
 
 export const HeaderServices = () => {
   return (
     <div className={styles.headerServices}>
-      <div className={styles.item}>
+      <Button
+        additionalClassname={styles.servicesButton}
+        variant="clear"
+        iconRight={<ArrowBottomIcon />}
+      >
         Мобильная связь
-        <ArrowBottomIcon />
-      </div>
-      <div className={styles.item}>
+      </Button>
+
+      <Button
+        additionalClassname={styles.servicesButton}
+        variant="clear"
+        iconRight={<ArrowBottomIcon />}
+      >
         Интернет
-        <ArrowBottomIcon />
-      </div>
-      <div className={styles.item}>
+      </Button>
+
+      <Button
+        additionalClassname={styles.servicesButton}
+        variant="clear"
+        iconRight={<ArrowBottomIcon />}
+      >
         Сервисы
-        <ArrowBottomIcon />
-      </div>
-      <div className={styles.item}>
+      </Button>
+      <Button
+        additionalClassname={styles.servicesButton}
+        variant="clear"
+        iconRight={<ArrowBottomIcon />}
+      >
         Интернет-магазин
-        <ArrowBottomIcon />
-      </div>
+      </Button>
     </div>
   );
 };
