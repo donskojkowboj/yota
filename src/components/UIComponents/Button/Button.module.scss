@@ -1,22 +1,24 @@
+@import '../../../styles/variables.scss';
+
 @mixin baseButton {
   border-radius: 100px;
   border: 2px solid transparent;
   font-size: 16px;
   line-height: 1.37;
-  transition: all 0.3s ease;
 }
 
 .button {
   background-color: transparent;
   border: none;
-  color: #434c5d;
+  color: $btn-1;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 4px;
+  transition: all 0.3s ease;
 
   &:hover {
-    color: #00aeef;
+    color: $btn-1-hover;
   }
 }
 
@@ -30,46 +32,46 @@
 
 .blue {
   @include baseButton;
-  background-color: #00aeef;
-  color: #ffffff;
+  background-color: $btn-blue;
+  color: $btn-blue-text;
 
   &:hover {
-    background-color: #0080b3;
-    color: #e0e0e0;
+    background-color:$btn-blue-hover;
+    color: $btn-blue-text-hover;
   }
 }
 
 .white {
   @include baseButton;
-  background-color: #ffffff;
-  color: #00aeef;
+  background-color:$btn-white;
+  color: $btn-white-text;
 
   &:hover {
-    background-color: #e6e6e6;
-    color: #434c5d;
+    background-color: $btn-white-hover;
+    color: $btn-white-text-hover;
   }
 }
 
 .outline {
   @include baseButton;
-  border-color: #00aeef;
-  color: #00aeef;
+  border-color: $btn-outline;
+  color: $btn-outline;
 
   &:hover {
-    background-color: #e6e6e6;
-    border-color: #0080b3;
-    color: #0080b3;
+    background-color: $btn-outline-bg-hover;
+    border-color: $btn-outline-hover;
+    color: $btn-outline-hover;
   }
 }
 
 .outlineDark {
   @include baseButton;
-  border-color: #434c5d;
-  color: #434c5d;
+  border-color: $btn-outlineDark;
+  color: $btn-outlineDark;
 
   &:hover {
-    background-color: #e6e6e6;
-    color: #6b7484;
-    border-color: #6b7484;
+    background-color: $btn-outlineDark-bg-hover;
+    color: $btn-outlineDark-hover;
+    border-color: $btn-outlineDark-hover;
   }
 }

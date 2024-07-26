@@ -1,8 +1,9 @@
+@import '../../../../../../styles/variables.scss';
 .headerSelectCity {
   display: flex;
   flex-direction: column;
-  color: #434c5d;
-  border-bottom: #E3E4E7 dashed 1px;
+  color: $btn-1;
+  border-bottom: $border-color dashed 1px;
 }
 
 .locationButton {
