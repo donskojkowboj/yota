@@ -31,6 +31,7 @@ export const Button = ({
     if (variant === 'clear') {
       return '';
     }
+    
     switch (size) {
       case 'medium':
         return styles.medium;

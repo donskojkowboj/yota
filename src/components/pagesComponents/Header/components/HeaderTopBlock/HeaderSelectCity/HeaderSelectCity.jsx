@@ -1,6 +1,5 @@
 import { Button } from '../../../../../UIComponents/Button';
 import { LocationIcon } from '../../../../../UIComponents/Icons';
-import { DottedLineIcon } from '../../../../../UIComponents/Icons';
 import styles from './HeaderSelectCity.module.scss';
 
 export const HeaderSelectCity = () => {
@@ -13,7 +12,6 @@ export const HeaderSelectCity = () => {
       >
         Москва
       </Button>
-      <DottedLineIcon />
     </div>
   );
 };
