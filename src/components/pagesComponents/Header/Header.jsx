@@ -7,6 +7,9 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.headerContainer}>
         <HeaderTopBlock />
+      </div>
+      <div className={styles.border}></div>
+      <div className={styles.headerContainer}>
         <HeaderBottomBlock />
       </div>
     </header>

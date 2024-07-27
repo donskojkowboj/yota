@@ -1,4 +1,3 @@
-import { UserIcon } from '../Icons';
 import styles from './Button.module.scss';
 
 export const Button = ({
@@ -31,7 +30,7 @@ export const Button = ({
     if (variant === 'clear') {
       return '';
     }
-    
+
     switch (size) {
       case 'medium':
         return styles.medium;

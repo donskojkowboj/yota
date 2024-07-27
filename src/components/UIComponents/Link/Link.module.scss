@@ -1,4 +1,19 @@
 @import '../../../styles/variables.scss';
 .link {
   color: $text-color-primary;
+  position: relative;
+}
+
+.active {
+  color: $text-color-secondary;
+  &:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    border-radius: 27px;
+    bottom: -21px;
+    left: 0;
+    background-color: $text-color-secondary;
+  }
 }

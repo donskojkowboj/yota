@@ -6,16 +6,16 @@ export const HeaderNavbar = () => {
     <nav className={styles.headerNavbar}>
       <ul className={styles.navbarList}>
         <li className={styles.navbarItem}>
-          <Link>Поддержка</Link>
+          <Link href="#">Поддержка</Link>
         </li>
         <li className={styles.navbarItem}>
-          <Link>Оплата</Link>
+          <Link href="#">Оплата</Link>
         </li>
         <li className={styles.navbarItem}>
-          <Link>Карта покрытия</Link>
+          <Link href="#">Карта покрытия</Link>
         </li>
         <li className={styles.navbarItem}>
-          <Link>Точки продаж</Link>
+          <Link href="#">Точки продаж</Link>
         </li>
       </ul>
     </nav>
