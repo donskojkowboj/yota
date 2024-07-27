@@ -1,3 +1,10 @@
+@import '../../../../../../styles/variables.scss';
 .clearBlue {
-  color: #00aeef;
+  color: $btn-blue;
+  &:hover {
+    color: $btn-blue-hover;
+    svg path {
+      fill: $btn-blue-hover;
+    }
+  }
 }
