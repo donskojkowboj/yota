@@ -10,7 +10,7 @@
 .button {
   background-color: transparent;
   border: none;
-  color: $btn-1;
+  color: $btn-primary;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
   transition: all 0.3s ease;
 
   &:hover {
-    color: $btn-1-hover;
+    color: $btn-primary-hover;
   }
 }
 
