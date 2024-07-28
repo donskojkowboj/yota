@@ -5,7 +5,7 @@ import styles from './HeaderTopBlock.module.scss';
 
 export const HeaderTopBlock = () => {
   return (
-    <>
+    <div className={styles.border}>
       <div className={styles.headerTopBlock}>
         <HeaderSelectCity />
         <div className={styles.wrapper}>
@@ -13,6 +13,6 @@ export const HeaderTopBlock = () => {
           <HeaderNavbar />
         </div>
       </div>
-    </>
+    </div>
   );
 };

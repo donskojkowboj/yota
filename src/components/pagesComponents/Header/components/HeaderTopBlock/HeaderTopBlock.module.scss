@@ -1,7 +1,15 @@
+@import '../../../../../styles/variables.scss';
+
+.border {
+  border-bottom: 1px solid $border-color;
+}
+
 .headerTopBlock {
   display: flex;
-  gap: 110px;
-  padding: 20px 0;
+  gap: 109px;
+  padding: 15px 0;
+  width: 1320px;
+  margin: 0 auto;
 }
 
 .wrapper {

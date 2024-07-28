@@ -1,9 +1,16 @@
 .headerBottomBlock {
-  padding: 20px 0;
+  padding: 14px 0;
+  width: 1320px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   gap: 72px;
 }
+
+.headerButton {
+  max-height: 48px;
+}
+
 
 .wrapper {
   display: flex;

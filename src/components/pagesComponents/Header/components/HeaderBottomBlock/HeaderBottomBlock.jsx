@@ -15,7 +15,12 @@ export const HeaderBottomBlock = () => {
         <HeaderLogo />
         <div className={styles.wrapper}>
           <HeaderServices />
-          <Button onClick={() => handleClick()}>Заказать SIM-карту</Button>
+          <Button
+            additionalClassname={styles.headerButton}
+            onClick={() => handleClick()}
+          >
+            Заказать SIM-карту
+          </Button>
           <HeaderAccount />
         </div>
       </div>
