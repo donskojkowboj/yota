@@ -3,6 +3,7 @@ import { HeaderServices } from './HeaderServices';
 import { HeaderAccount } from './HeaderAccount';
 import { Button } from '../../../../UIComponents/Button';
 import styles from './HeaderBottomBlock.module.scss';
+import commonStyles from '../../Header.module.scss';
 
 export const HeaderBottomBlock = () => {
   const handleClick = () => {
@@ -10,7 +11,7 @@ export const HeaderBottomBlock = () => {
   };
 
   return (
-    <>
+    <div className={commonStyles.headerContainer}>
       <div className={styles.headerBottomBlock}>
         <HeaderLogo />
         <div className={styles.wrapper}>
@@ -24,6 +25,6 @@ export const HeaderBottomBlock = () => {
           <HeaderAccount />
         </div>
       </div>
-    </>
+    </div>
   );
 };
