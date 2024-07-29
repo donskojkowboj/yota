@@ -1,4 +1,22 @@
 @import '../../../styles/variables.scss';
 .link {
   color: $text-color-primary;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.42;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: $text-color-secondary;
+  }
+}
+
+.blue {
+  font-size: 16px;
+  line-height: 1.50;
+  color: $text-color-secondary;
+
+  &:hover {
+    color: $text-color-primary;
+  }
 }
