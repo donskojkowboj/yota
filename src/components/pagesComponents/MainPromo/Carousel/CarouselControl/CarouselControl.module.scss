@@ -1,0 +1,34 @@
+@import '../../../../../styles/variables.scss';
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.control {
+  position: relative;
+  width: 40px;
+  height: 4px;
+  border-radius: 999px;
+  background-color: $carousel-controls-color;
+  cursor: pointer;
+}
+
+.active {
+  transition: linear;
+  &:after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    border-radius: 999px;
+    animation-name: progress;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-color: $bg-color-primary;
+  }
+}

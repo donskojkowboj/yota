@@ -1,18 +1,17 @@
-$brand-color-primary: #00AEEF;
-$brand-color-secondary: #434C5E;
-$brand-color-tertiary: #FFF;
+$brand-color-primary: #00aeef;
+$brand-color-secondary: #434c5e;
+$brand-color-tertiary: #fff;
 
 $text-color-primary: $brand-color-secondary;
 $text-color-secondary: $brand-color-primary;
 $text-color-tertiary: $brand-color-tertiary;
-$text-color-descr: #89909C;
-$text-color-copyright: #A1A5AE;
+$text-color-descr: #89909c;
+$text-color-copyright: #a1a5ae;
 
 $bg-color-primary: $brand-color-tertiary;
-$bg-color-secondary: #F7F8FA;
+$bg-color-secondary: #f7f8fa;
 $bg-color-tertiary: $brand-color-primary;
-$bg-color-quaternary: #B2E7FA33;
-
+$bg-color-quaternary: #b2e7fa33;
 
 $btn-primary: $brand-color-secondary;
 $btn-primary-hover: $brand-color-primary;
@@ -37,8 +36,9 @@ $btn-outlineDark-bg-hover: #e6e6e6;
 
 $shadow-color: #00000014;
 
-$input-mask-color: #ABBAC8;
+$input-mask-color: #abbac8;
+$input-border-color: #abbac84c;
 
-$border-color: #E3E4E7;
+$border-color: #e3e4e7;
 
-$carousel-controls-color: #8CDBF8;
+$carousel-controls-color: #8cdbf8;
