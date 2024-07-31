@@ -1,22 +1,14 @@
-@import '../../../../styles/variables.scss';
+@import '../../../styles/variables.scss';
 
-.serviceCard {
+.greyVertical {
   padding: 12px 40px 24px 40px;
   width: 370px;
   height: 460px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
   justify-content: space-between;
   background-color: $bg-color-secondary;
   border-radius: 24px;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 32px;
 }
 
 .img {
@@ -27,24 +19,22 @@
 .textContent {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .title {
   font-size: 24px;
   font-weight: 600;
+  line-height: 1.25;
 }
 
 .descr {
+  margin-top: 12px;
   color: $text-color-descr;
-  padding-top: 12px;
-  margin-top: auto;
+  line-height: 1.87;
 }
 
 .btn {
   display: flex;
-  justify-self: flex-end;
   justify-content: center;
-  align-items: center;
   width: 200px;
 }

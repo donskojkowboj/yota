@@ -1,26 +1,19 @@
-@import '../../../../styles/variables.scss';
+@import '../../../styles/variables.scss';
 
-.pay {
+.title {
   font-size: 24px;
   color: $text-color-primary;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   line-height: 30px;
   gap: 8px;
   font-weight: 600;
 }
 
-.paymentCard {
-  grid-column: 1 / 4;
-  grid-row: 2 / 3;
-}
-
 .form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  position: relative;
+  justify-content: space-between;
 }
 .inputsWrapper {
   display: flex;
@@ -29,7 +22,6 @@
 .sum {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 4px;
   color: $text-color-descr;
   font-size: 16px;
@@ -48,7 +40,6 @@
 .tel {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 4px;
   color: $text-color-descr;
   font-size: 16px;
@@ -83,7 +74,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.cardBtn {
+.btn {
   margin-top: 38px;
   width: 200px;
   display: flex;

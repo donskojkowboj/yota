@@ -1,5 +1,5 @@
 import { Container } from '../../pagesComponents/Container';
-import { MainPromo } from '../../pagesComponents/MainPromo';
+import { MainPromo } from '../../pagesComponents/MainPage/MainPromo';
 
 import styles from './HomePage.module.scss';
 

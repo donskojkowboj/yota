@@ -4,6 +4,7 @@
   border-radius: 100px;
   border: 2px solid transparent;
   font-size: 16px;
+  font-weight: 600;
   line-height: 1.37;
 }
 
@@ -36,14 +37,14 @@
   color: $btn-blue-text;
 
   &:hover {
-    background-color:$btn-blue-hover;
+    background-color: $btn-blue-hover;
     color: $btn-blue-text-hover;
   }
 }
 
 .white {
   @include baseButton;
-  background-color:$btn-white;
+  background-color: $btn-white;
   color: $btn-white-text;
 
   &:hover {

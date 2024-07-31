@@ -1,12 +1,10 @@
-@import '../../../../styles/variables.scss';
+@import '../../../styles/variables.scss';
 
-.carousel {
+.blue {
   position: relative;
-  padding: 55px 80px;
+  padding: 50px 119px 54px 80px;
   border-radius: 24px;
   background-color: $bg-color-tertiary;
-  grid-column: 1 / 7;
-  grid-row: 1 / 2;
 }
 
 .title {
@@ -19,13 +17,16 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
+
 .innerWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
+
 .textWrapper {
   display: flex;
   flex-direction: column;

@@ -1,8 +1,5 @@
+import { Card } from '../../../UIComponents/Card';
 import styles from './MainPromo.module.scss';
-import { Carousel } from './Carousel';
-import { PaymentCard } from './PaymentCard/index.js';
-import { PackageCard } from './PackageCard/index.js';
-import { ExtraCard } from './ExtraCard/index.js';
 
 export const MainPromo = () => {
   return (
@@ -11,26 +8,43 @@ export const MainPromo = () => {
         можно. <span>yota</span>
       </h1>
       <div className={styles.grid}>
-        <Carousel />
-        <PaymentCard />
-        <PackageCard />
-        <ExtraCard
-          additionalClassname={styles.first}
+        <Card
+          variant="blue"
+          imgSrc="/src/assets/images/promo-simcards.png"
+          additionalClassname={styles.blueGrid}
+        />
+
+        <Card variant="greyForm" additionalClassname={styles.greyFormGrid} />
+
+        <Card
+          variant="grey"
+          title="Подобрать тариф"
+          descr="Выбери из готовых тарифов или создай свой"
+          btnText="Выбрать"
+          btnVariant="outline"
+          additionalClassname={styles.chooseTariff}
+        />
+
+        <Card
+          variant="greyVertical"
           imgSrc="/src/assets/images/double-sim.png"
           title="Хочу в YOTA со своим номером"
           descr="Введите номер для переноса"
+          additionalClassname={styles.ownNumber}
         />
-        <ExtraCard
-          additionalClassname={styles.second}
+        <Card
+          variant="greyVertical"
           imgSrc="/src/assets/images/flash-card.png"
           title="Подключить интернет"
           descr="4G интернет. Для дома, для офиса, для поездок."
+          additionalClassname={styles.internet}
         />
-        <ExtraCard
-          additionalClassname={styles.third}
+        <Card
+          variant="greyVertical"
           imgSrc="/src/assets/images/router.png"
           title="Интернет магазин"
           descr="Можно купить роутер, модем или интернет-центр для дома и офиса"
+          additionalClassname={styles.netShop}
         />
       </div>
     </div>
