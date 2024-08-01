@@ -27,22 +27,55 @@
   grid-column: 1 / 7;
   grid-row: 1 / 2;
 }
+.blueWrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.blueTitle {
+  color: $text-color-tertiary;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.27;
+}
+
+.blueInnerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.blueTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.blueDescr {
+  color: $text-color-tertiary;
+  font-size: 22px;
+  max-width: 350px;
+  line-height: 1.45;
+}
+
+.blueImg {
+  max-width: 356px;
+  height: auto;
+}
+
+.blueCarouselButtons {
+  position: absolute;
+  display: flex;
+  gap: 6px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .greyFormGrid {
   grid-column: 1 / 4;
   grid-row: 2 / 3;
-}
-
-.card {
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 310px;
-  width: 568px;
-  border-radius: 24px;
-  background-color: $bg-color-secondary;
-  background-repeat: no-repeat;
 }
 
 .chooseTariff {
@@ -51,6 +84,11 @@
   background-position: 100%;
   grid-column: 4 / 7;
   grid-row: 2 / 3;
+}
+
+.vertical {
+  width: 370px;
+  height: 460px;
 }
 
 .ownNumber {
@@ -66,6 +104,10 @@
 .netShop {
   grid-column: 5 / 7;
   grid-row: 3 / 4;
+}
+
+.perfectTariff {
+  grid-column: 3 / 6;
 }
 
 .outlineCard {
