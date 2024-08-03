@@ -16,118 +16,159 @@
 }
 
 .grid {
-  margin-top: 40px;
+  margin-top: 24px;
   display: grid;
   gap: 24px;
-  grid-template-columns: repeat(6, calc(1040px / 6));
-  grid-template-rows: 367px 310px 458px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 310px 460px;
+  grid-template-areas:
+    'form form form tariff tariff tariff'
+    'number number internet internet shop shop';
 }
 
-.blueGrid {
-  grid-column: 1 / 7;
-  grid-row: 1 / 2;
+.blue {
+  margin-top: 40px;
+  position: relative;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__innerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__img {
+    max-width: 356px;
+    height: auto;
+  }
+  &__carouselButtons {
+    position: absolute;
+    display: flex;
+    gap: 6px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
-.blueWrapper {
+
+.form {
+  grid-area: form;
   display: flex;
-  justify-content: space-between;
+  width: 100%;
   height: 100%;
-}
-.blueTitle {
-  color: $text-color-tertiary;
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 1.27;
-}
-
-.blueInnerWrapper {
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-between;
+  &__wrapper {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  &__sum {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: $text-color-descr;
+    font-size: 16px;
+    label {
+      padding-left: 5px;
+    }
+    input {
+      border-radius: 12px;
+      border: 1px solid $input-border-color;
+      padding: 13px 24px;
+      max-width: 130px;
+      font-size: 22px;
+    }
+  }
+  &__tel {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: $text-color-descr;
+    font-size: 16px;
+    label {
+      padding-left: 5px;
+    }
+    input {
+      border-radius: 12px;
+      border: 1px solid $input-border-color;
+      padding: 13px 24px;
+      max-width: 342px;
+      font-size: 22px;
+    }
+  }
 }
 
-.blueTextWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.blueDescr {
-  color: $text-color-tertiary;
-  font-size: 22px;
-  max-width: 350px;
-  line-height: 1.45;
-}
-
-.blueImg {
-  max-width: 356px;
-  height: auto;
-}
-
-.blueCarouselButtons {
-  position: absolute;
-  display: flex;
-  gap: 6px;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.greyFormGrid {
-  grid-column: 1 / 4;
-  grid-row: 2 / 3;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .chooseTariff {
-  background-image: url('/src/assets/images/package-pricing.png');
-  background-size: 270px;
-  background-position: 100%;
-  grid-column: 4 / 7;
-  grid-row: 2 / 3;
+  grid-area: tariff;
+  display: flex;
+  justify-content: space-between;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 12px;
+  }
+  &__img {
+    width: 270px;
+    height: auto;
+  }
 }
 
-.vertical {
-  width: 370px;
-  height: 460px;
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .ownNumber {
-  grid-column: 1 / 3;
-  grid-row: 3 / 4;
-}
-
-.internet {
-  grid-column: 3 / 5;
-  grid-row: 3 / 4;
-}
-
-.netShop {
-  grid-column: 5 / 7;
-  grid-row: 3 / 4;
-}
-
-.perfectTariff {
-  grid-column: 3 / 6;
-}
-
-.outlineCard {
-  padding: 24px;
-  height: 404px;
+  grid-area: number;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  border-radius: 24px;
-  border: 1px solid $border-color;
 }
 
-.tariff {
-  width: 292px;
-}
-
-.constructor {
-  position: relative;
+.internet {
+  grid-area: internet;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  width: 324px;
-  align-items: flex-start;
+}
+
+.netShop {
+  grid-area: shop;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.clearBlue {
+  color: $btn-blue;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  &:hover {
+    color: $btn-blue-hover;
+    svg path {
+      fill: $btn-blue-hover;
+    }
+  }
 }
