@@ -1,14 +1,14 @@
 import { Container } from '../../pagesComponents/Container';
 import { MainPromo } from '../../pagesComponents/MainPage/MainPromo';
 
-import styles from './HomePage.module.scss';
+import styles from './MainPage.module.scss';
 
-export const HomePage = () => {
+export const MainPage = () => {
   return (
-    <Container>
-      <div className={styles.homepage}>
+    <section className={styles.mainPromo}>
+      <Container>
         <MainPromo />
-      </div>
-    </Container>
+      </Container>
+    </section>
   );
 };

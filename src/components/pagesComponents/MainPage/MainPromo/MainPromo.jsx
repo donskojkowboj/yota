@@ -7,8 +7,10 @@ import { commonCardStyles } from '../../../UIComponents/Card';
 import styles from './MainPromo.module.scss';
 
 export const MainPromo = () => {
+  const promoSliderTitle = `${commonCardStyles.title} ${commonCardStyles.title__big} ${commonCardStyles.title__white}`;
+  const promoSliderDescription = `${commonCardStyles.description} ${commonCardStyles.description__big} ${commonCardStyles.description__white}`;
   return (
-    <div className={styles.promo}>
+    <div>
       <h1 className={styles.title}>
         можно. <span>yota</span>
       </h1>
@@ -17,14 +19,8 @@ export const MainPromo = () => {
         <div className={styles.promoSlider__wrapper}>
           <div className={styles.promoSlider__innerWrapper}>
             <div className={styles.promoSlider__textWrapper}>
-              <h2
-                className={`${commonCardStyles.title} ${commonCardStyles.title__big} ${commonCardStyles.title__white}`}
-              >
-                Семейный конструктор
-              </h2>
-              <div
-                className={`${commonCardStyles.description} ${commonCardStyles.description__big} ${commonCardStyles.description__white}`}
-              >
+              <h2 className={promoSliderTitle}>Семейный конструктор</h2>
+              <div className={promoSliderDescription}>
                 Выгода до 15% за объединение номеров в группу
               </div>
             </div>
@@ -52,7 +48,7 @@ export const MainPromo = () => {
           direction="horizontal"
           additionalClassname={styles.form}
         >
-          <h2 className={`${commonCardStyles.title} ${styles.addFlex}`}>
+          <h2 className={`${commonCardStyles.title} ${styles.form__title}`}>
             Оплатить
             <Button
               variant="clear"
@@ -98,11 +94,13 @@ export const MainPromo = () => {
               Выбрать
             </Button>
           </div>
-          <img
-            className={styles.chooseTariff__img}
-            src="/src/assets/images/package-pricing.png"
-            alt="img"
-          />
+          <div>
+            <img
+              className={styles.chooseTariff__img}
+              src="/src/assets/images/package-pricing.png"
+              alt="img"
+            />
+          </div>
         </Card>
 
         <Card variant="grey" additionalClassname={styles.ownNumber}>

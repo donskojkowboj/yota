@@ -1,7 +1,4 @@
 @import '../../../../styles/variables.scss';
-.promo {
-  padding-top: 80px;
-}
 
 .title {
   font-size: 72px;
@@ -24,11 +21,6 @@
   grid-template-areas:
     'form form form tariff tariff tariff'
     'number number internet internet shop shop';
-}
-
-.addFlex {
-  display: flex;
-  gap: 8px;
 }
 
 .promoSlider {
@@ -71,6 +63,10 @@
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
+  &__title {
+    display: flex;
+    gap: 8px;
+  }
   &__wrapper {
     display: flex;
     gap: 24px;
@@ -91,6 +87,11 @@
       padding: 13px 24px;
       max-width: 130px;
       font-size: 22px;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
     }
   }
   &__tel {
@@ -112,16 +113,11 @@
   }
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 .chooseTariff {
   grid-area: tariff;
   display: flex;
   justify-content: space-between;
+  position: relative;
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -133,6 +129,8 @@ input::-webkit-inner-spin-button {
     gap: 12px;
   }
   &__img {
+    margin-top: -20px;
+    margin-right: -20px;
     width: 270px;
     height: auto;
   }

@@ -7,6 +7,7 @@
   &__big {
     font-size: 36px;
     line-height: 1.27;
+    letter-spacing: 0.11px;
   }
   &__white {
     color: $text-color-tertiary;
@@ -15,7 +16,7 @@
 
 .description {
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.87;
   color: $text-color-descr;
   &__big {
     font-size: 22px;
