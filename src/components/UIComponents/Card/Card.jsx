@@ -1,12 +1,12 @@
 import styles from './Card.module.scss';
 
 export const Card = ({
-  variant,
+  variant = 'blue',
   children,
   direction = 'vertical',
   additionalClassname,
 }) => {
-  const createButtonVariantClassname = () => {
+  const createCardVariantClassname = () => {
     switch (variant) {
       case 'blue':
         return styles.blue;
@@ -25,6 +25,6 @@ export const Card = ({
     }
   };
 
-  const cardClassname = `${styles.card} ${direction} ${createButtonVariantClassname()} ${additionalClassname}`;
+  const cardClassname = `${styles.card} ${styles[direction]} ${createCardVariantClassname()} ${additionalClassname}`;
   return <div className={cardClassname}>{children}</div>;
 };

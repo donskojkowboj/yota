@@ -13,17 +13,17 @@ export const MainPromo = () => {
         можно. <span>yota</span>
       </h1>
 
-      <Card variant="blue" additionalClassname={styles.blue}>
-        <div className={styles.blue__wrapper}>
-          <div className={styles.blue__innerWrapper}>
-            <div className={styles.blue__textWrapper}>
+      <Card variant="blue" additionalClassname={styles.promoSlider}>
+        <div className={styles.promoSlider__wrapper}>
+          <div className={styles.promoSlider__innerWrapper}>
+            <div className={styles.promoSlider__textWrapper}>
               <h2
                 className={`${commonCardStyles.title} ${commonCardStyles.title__big} ${commonCardStyles.title__white}`}
               >
                 Семейный конструктор
               </h2>
               <div
-                className={`${commonCardStyles.description__big} ${commonCardStyles.description__white}`}
+                className={`${commonCardStyles.description} ${commonCardStyles.description__big} ${commonCardStyles.description__white}`}
               >
                 Выгода до 15% за объединение номеров в группу
               </div>
@@ -32,12 +32,12 @@ export const MainPromo = () => {
             <Button variant="white">Заказать SIM-карту</Button>
           </div>
           <img
-            className={styles.blue__img}
+            className={styles.promoSlider__img}
             src="/src/assets/images/promo-simcards.png"
             alt="promo"
           />
         </div>
-        <div className={styles.blue__carouselButtons}>
+        <div className={styles.promoSlider__carouselButtons}>
           <CarouselControl variant="active" />
           <CarouselControl />
           <CarouselControl />
@@ -52,9 +52,7 @@ export const MainPromo = () => {
           direction="horizontal"
           additionalClassname={styles.form}
         >
-          <h2
-            className={`${commonCardStyles.title} ${commonCardStyles.addFlex}`}
-          >
+          <h2 className={`${commonCardStyles.title} ${styles.addFlex}`}>
             Оплатить
             <Button
               variant="clear"

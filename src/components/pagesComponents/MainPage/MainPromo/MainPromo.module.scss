@@ -26,7 +26,12 @@
     'number number internet internet shop shop';
 }
 
-.blue {
+.addFlex {
+  display: flex;
+  gap: 8px;
+}
+
+.promoSlider {
   margin-top: 40px;
   position: relative;
   &__wrapper {
@@ -141,23 +146,14 @@ input::-webkit-inner-spin-button {
 
 .ownNumber {
   grid-area: number;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .internet {
   grid-area: internet;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .netShop {
   grid-area: shop;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .clearBlue {
