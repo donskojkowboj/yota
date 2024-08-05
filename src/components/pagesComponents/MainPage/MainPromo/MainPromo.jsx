@@ -8,6 +8,7 @@ import styles from './MainPromo.module.scss';
 
 export const MainPromo = () => {
   const promoSliderTitle = `${commonCardStyles.title} ${commonCardStyles.title__big} ${commonCardStyles.title__white}`;
+
   const promoSliderDescription = `${commonCardStyles.description} ${commonCardStyles.description__big} ${commonCardStyles.description__white}`;
   return (
     <div>
@@ -94,13 +95,12 @@ export const MainPromo = () => {
               Выбрать
             </Button>
           </div>
-          <div>
-            <img
-              className={styles.chooseTariff__img}
-              src="/src/assets/images/package-pricing.png"
-              alt="img"
-            />
-          </div>
+
+          <img
+            className={styles.chooseTariff__img}
+            src="/src/assets/images/package-pricing.png"
+            alt="img"
+          />
         </Card>
 
         <Card variant="grey" additionalClassname={styles.ownNumber}>
