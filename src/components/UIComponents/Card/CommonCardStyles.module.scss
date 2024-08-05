@@ -1,0 +1,40 @@
+@import '../../../styles/variables.scss';
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  &__big {
+    font-size: 36px;
+    line-height: 1.27;
+    letter-spacing: 0.11px;
+  }
+  &__white {
+    color: $text-color-tertiary;
+  }
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.87;
+  color: $text-color-descr;
+  &__big {
+    font-size: 22px;
+    line-height: 1.45;
+  }
+  &__white {
+    color: $text-color-tertiary;
+  }
+}
+
+.img {
+  position: relative;
+  width: 188px;
+  height: auto;
+  margin-top: -26px;
+}
+
+.btn {
+  margin-top: auto;
+  width: 200px;
+}

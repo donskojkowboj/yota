@@ -1,0 +1,169 @@
+@import '../../../../styles/variables.scss';
+
+.title {
+  font-size: 72px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $text-color-primary;
+  line-height: 1.13;
+  span {
+    color: $text-color-secondary;
+  }
+}
+
+.grid {
+  margin-top: 24px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 310px 460px;
+  grid-template-areas:
+    'form form form tariff tariff tariff'
+    'number number internet internet shop shop';
+}
+
+.promoSlider {
+  margin-top: 40px;
+  position: relative;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__innerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__img {
+    max-width: 356px;
+    height: auto;
+  }
+  &__carouselButtons {
+    position: absolute;
+    display: flex;
+    gap: 6px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.form {
+  grid-area: form;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  &__title {
+    display: flex;
+    gap: 8px;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  &__sum {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: $text-color-descr;
+    font-size: 16px;
+    label {
+      padding-left: 5px;
+    }
+    input {
+      border-radius: 12px;
+      border: 1px solid $input-border-color;
+      padding: 13px 24px;
+      max-width: 130px;
+      font-size: 22px;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  &__tel {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: $text-color-descr;
+    font-size: 16px;
+    label {
+      padding-left: 5px;
+    }
+    input {
+      border-radius: 12px;
+      border: 1px solid $input-border-color;
+      padding: 13px 24px;
+      max-width: 342px;
+      font-size: 22px;
+    }
+  }
+}
+
+.chooseTariff {
+  grid-area: tariff;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 12px;
+  }
+  &__img {
+    display: block;
+    margin-top: -20px;
+    margin-right: -20px;
+    width: 270px;
+    height: 270px;
+  }
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ownNumber {
+  grid-area: number;
+}
+
+.internet {
+  grid-area: internet;
+}
+
+.netShop {
+  grid-area: shop;
+}
+
+.clearBlue {
+  color: $btn-blue;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  &:hover {
+    color: $btn-blue-hover;
+    svg path {
+      fill: $btn-blue-hover;
+    }
+  }
+}

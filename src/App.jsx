@@ -1,10 +1,10 @@
-import { HomePage } from './components/pages/HomePage/index';
+import { MainPage } from './components/pages/MainPage/index';
 import { Layout } from './components/pagesComponents/Layout/index';
 
 function App() {
   return (
     <Layout>
-      <HomePage />
+      <MainPage />
     </Layout>
   );
 }
