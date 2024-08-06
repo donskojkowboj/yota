@@ -1,5 +1,9 @@
+import { useState } from 'react';
+import createNumberMask from 'text-mask-addons/dist/createNumberMask';
+
 import { Card } from '../../../UIComponents/Card';
 import { Button } from '../../../UIComponents/Button';
+import { Input } from '../../../UIComponents/Input';
 import { CarouselControl } from '../../../UIComponents/CarouselControl';
 import { ArrowBottomIcon } from '../../../UIComponents/Icons';
 
@@ -7,15 +11,59 @@ import { commonCardStyles } from '../../../UIComponents/Card';
 import styles from './MainPromo.module.scss';
 
 export const MainPromo = () => {
+  const phoneMask = [
+    '+',
+    '7',
+    ' ',
+    '(',
+    /[9]/,
+    /\d/,
+    /\d/,
+    ')',
+    ' ',
+    /\d/,
+    /\d/,
+    /\d/,
+    '-',
+    /\d/,
+    /\d/,
+    '-',
+    /\d/,
+    /\d/,
+  ];
+
+  const currencyMask = createNumberMask({
+    prefix: '',
+    suffix: ' ₽',
+    includeThousandsSeparator: true,
+    allowDecimal: false,
+    allowNegative: false,
+    allowLeadingZeroes: false,
+  });
+
+  const [sum, setSum] = useState('');
+  const [phone, setPhone] = useState('');
+
+  const handleSumChange = (e) => {
+    setSum(e.target.value);
+  };
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(`Cумма перевода: ${sum}, номер телефона: ${phone}`);
+  };
   const promoSliderTitle = `${commonCardStyles.title} ${commonCardStyles.title__big} ${commonCardStyles.title__white}`;
 
   const promoSliderDescription = `${commonCardStyles.description} ${commonCardStyles.description__big} ${commonCardStyles.description__white}`;
+
   return (
     <div>
       <h1 className={styles.title}>
         можно. <span>yota</span>
       </h1>
-
       <Card variant="blue" additionalClassname={styles.promoSlider}>
         <div className={styles.promoSlider__wrapper}>
           <div className={styles.promoSlider__innerWrapper}>
@@ -52,6 +100,7 @@ export const MainPromo = () => {
           <h2 className={`${commonCardStyles.title} ${styles.form__title}`}>
             Оплатить
             <Button
+              type="submit"
               variant="clear"
               iconRight={<ArrowBottomIcon />}
               additionalClassname={styles.clearBlue}
@@ -60,17 +109,32 @@ export const MainPromo = () => {
             </Button>
           </h2>
 
-          <form className={styles.form}>
+          <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.form__wrapper}>
-              <div className={styles.form__sum}>
-                <label htmlFor="sum">Сумма</label>
-                <input placeholder="500₽" type="number" id="sum" />
-              </div>
+              <Input
+                additionalClass={styles.form__sum}
+                id="sum"
+                htmlFor="sum"
+                label="Сумма"
+                placeholder="500₽"
+                maxLength="7"
+                value={sum}
+                onChange={handleSumChange}
+                mask={currencyMask}
+              />
 
-              <div className={styles.form__tel}>
-                <label htmlFor="phone">Номер телефона</label>
-                <input placeholder="+7" type="tel" id="phone" />
-              </div>
+              <Input
+                additionalClass={styles.form__tel}
+                name="phone"
+                htmlFor="phone"
+                id="phone"
+                label="Номер телефона"
+                placeholder="+7"
+                type="tel"
+                mask={phoneMask}
+                value={phone}
+                onChange={handlePhoneChange}
+              />
             </div>
             <Button additionalClassname={commonCardStyles.btn}>Оплатить</Button>
           </form>
