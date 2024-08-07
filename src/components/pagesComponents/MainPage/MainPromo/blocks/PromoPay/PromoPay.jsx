@@ -61,35 +61,31 @@ export const PromoPay = () => {
 
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.form__wrapper}>
-          <div className={styles.form__errorWrapper}>
-            <Input
-              additionalClassname={styles.form__sum}
-              id="sum"
-              htmlFor="sum"
-              label="Сумма"
-              placeholder="500₽"
-              maxLength="7"
-              value={sum}
-              errorMessage={errors.sum}
-              onChange={handleSumChange}
-              mask={currencyMask}
-            />
-          </div>
-          <div className={styles.form__errorWrapper}>
-            <Input
-              additionalClassname={styles.form__tel}
-              name="phone"
-              htmlFor="phone"
-              id="phone"
-              label="Номер телефона"
-              placeholder="+7"
-              type="tel"
-              mask={phoneMask}
-              value={phone}
-              errorMessage={errors.phone}
-              onChange={handlePhoneChange}
-            />
-          </div>
+          <Input
+            additionalClassname={styles.form__sum}
+            id="sum"
+            htmlFor="sum"
+            label="Сумма"
+            placeholder="500₽"
+            maxLength="7"
+            value={sum}
+            errorMessage={errors.sum}
+            onChange={handleSumChange}
+            mask={currencyMask}
+          />
+          <Input
+            additionalClassname={styles.form__tel}
+            name="phone"
+            htmlFor="phone"
+            id="phone"
+            label="Номер телефона"
+            placeholder="+7"
+            type="tel"
+            mask={phoneMask}
+            value={phone}
+            errorMessage={errors.phone}
+            onChange={handlePhoneChange}
+          />
         </div>
         <Button additionalClassname={commonCardStyles.btn}>Оплатить</Button>
       </form>
