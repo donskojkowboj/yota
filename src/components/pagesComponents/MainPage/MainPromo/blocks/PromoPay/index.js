@@ -1,0 +1,1 @@
+export { PromoPay } from './PromoPay';

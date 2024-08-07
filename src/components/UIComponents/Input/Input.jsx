@@ -2,24 +2,26 @@ import MaskedInput from 'react-text-mask';
 import styles from './Input.module.scss';
 
 export const Input = ({
-  additionalClass,
+  additionalClassname,
   id,
-  htmlFor,
   label,
   placeholder,
   maxLength,
   value,
   onChange,
   mask,
+  errorMessage,
+  showMask,
   type = 'text',
+  ...rest
 }) => {
   const inputClassname = () => {
-    return `${styles.inputWrapper} ${additionalClass}`;
+    return `${styles.inputWrapper} ${additionalClassname}`;
   };
 
   return (
     <div className={inputClassname()}>
-      <label htmlFor={htmlFor} className={additionalClass}>
+      <label htmlFor={id} className={additionalClassname}>
         {label}
       </label>
 
@@ -31,7 +33,10 @@ export const Input = ({
         maxLength={maxLength}
         value={value}
         onChange={onChange}
+        {...rest}
       />
+
+      {{ errorMessage } && <span className={styles.error}>{errorMessage}</span>}
     </div>
   );
 };

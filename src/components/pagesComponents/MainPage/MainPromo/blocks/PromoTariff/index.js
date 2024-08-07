@@ -1,0 +1,1 @@
+export { PromoTariff } from './PromoTariff';
