@@ -1,0 +1,67 @@
+export const ToggleIcon = () => {
+  return (
+    <svg
+      width="32"
+      height="25"
+      viewBox="0 0 32 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="Turn on">
+        <rect
+          id="bg"
+          x="1.55273"
+          y="0.277344"
+          width="30"
+          height="20"
+          rx="10"
+          fill="#E3E4E7"
+        />
+        <g id="dot" filter="url(#filter0_d_0_2420)">
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M11.5527 17.2773C15.4187 17.2773 18.5527 14.1433 18.5527 10.2773C18.5527 6.41135 15.4187 3.27734 11.5527 3.27734C7.68674 3.27734 4.55273 6.41135 4.55273 10.2773C4.55273 14.1433 7.68674 17.2773 11.5527 17.2773Z"
+            fill="white"
+          />
+        </g>
+      </g>
+      <defs>
+        <filter
+          id="filter0_d_0_2420"
+          x="0.552734"
+          y="2.27734"
+          width="22"
+          height="22"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dy="3" />
+          <feGaussianBlur stdDeviation="2" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0.0858046 0 0 0 0 0.0840678 0 0 0 0 0.0840678 0 0 0 0.05 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_0_2420"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_dropShadow_0_2420"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+  );
+};

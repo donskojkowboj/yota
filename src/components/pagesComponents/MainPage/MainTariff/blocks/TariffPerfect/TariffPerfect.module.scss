@@ -1,0 +1,137 @@
+@import '../../../../../../styles/variables.scss';
+
+.perfectTariff {
+  padding: 24px;
+  gap: 40px;
+  grid-area: perfect;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.title {
+  color: $text-color-primary;
+  font-weight: 600;
+  line-height: 22px;
+}
+.messengers {
+  display: flex;
+  align-items: flex-start;
+}
+.calls {
+  display: flex;
+  gap: 10px;
+  max-width: 150px;
+}
+.freeCalls {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.optimal {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  button {
+    padding: 0;
+
+    &:hover {
+      svg path {
+        fill: $text-color-descr;
+      }
+      circle {
+        fill: $btn-outline-bg-hover;
+      }
+    }
+  }
+}
+
+.buttonsText {
+  align-self: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: $text-color-primary;
+  line-height: 1.16;
+}
+
+.textContainer {
+  display: flex;
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.16;
+  gap: 16px;
+}
+
+.package {
+  display: flex;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.blueNumber {
+  font-size: 48px;
+  font-weight: 700;
+  color: $text-color-secondary;
+  line-height: 1;
+  letter-spacing: -0.96px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  svg path,
+  circle {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    svg path {
+      fill: $text-color-descr;
+    }
+    circle {
+      fill: $btn-outline-bg-hover;
+    }
+  }
+}
+
+.btn {
+  svg path,
+  circle {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    svg path {
+      fill: $text-color-descr;
+    }
+    circle {
+      fill: $btn-outline-bg-hover;
+    }
+  }
+}
+
+.bottomWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.sum {
+  display: flex;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.27;
+  align-items: flex-start;
+  color: $text-color-secondary;
+}
+
+.ruble {
+  color: $text-color-primary;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.37;
+}

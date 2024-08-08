@@ -1,0 +1,26 @@
+@import '../../../../styles/variables.scss';
+
+.mainTariffContainer {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.1;
+  &__create {
+    color: $text-color-secondary;
+  }
+}
+
+.cardsWrapper {
+  margin-top: 60px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 292px 324px;
+  grid-template-rows: 404px;
+  grid-template-areas: 'create perfect';
+  gap: 32px;
+}
