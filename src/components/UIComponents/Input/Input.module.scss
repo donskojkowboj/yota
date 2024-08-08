@@ -1,0 +1,29 @@
+@import '../../../styles/variables.scss';
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  color: $text-color-descr;
+  gap: 4px;
+  label {
+    padding: 0 4px;
+  }
+  input {
+    color: $text-color-primary;
+    border-radius: 12px;
+    border: 1px solid $input-border-color;
+    padding: 13px 24px;
+    font-size: 22px;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+.error {
+  color: $text-color-error;
+  font-size: 14px;
+  padding: 0 4px;
+}

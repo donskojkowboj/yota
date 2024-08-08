@@ -1,0 +1,1 @@
+export { PromoInternet } from './PromoInternet';

@@ -1,0 +1,1 @@
+export { PromoNumber } from './PromoNumber';

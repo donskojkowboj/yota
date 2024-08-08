@@ -1,0 +1,23 @@
+.chooseTariff {
+  grid-area: tariff;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 12px;
+  }
+  &__img {
+    display: block;
+    margin-top: -20px;
+    margin-right: -20px;
+    width: 270px;
+    height: 270px;
+  }
+}

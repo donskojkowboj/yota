@@ -1,0 +1,1 @@
+export { PromoShop } from './PromoShop';
