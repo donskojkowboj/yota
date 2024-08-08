@@ -1,11 +1,10 @@
 import { Button } from '../../../../../UIComponents/Button';
 import { CarouselControl } from '../../../../../UIComponents/CarouselControl';
 import { Card, commonCardStyles } from '../../../../../UIComponents/Card';
-import styles from '../../MainPromo.module.scss';
+import styles from './PromoSlider.module.scss';
 
 export const PromoSlider = () => {
   const promoSliderTitle = `${commonCardStyles.title} ${commonCardStyles.title__big} ${commonCardStyles.title__white}`;
-
   const promoSliderDescription = `${commonCardStyles.description} ${commonCardStyles.description__big} ${commonCardStyles.description__white}`;
 
   return (

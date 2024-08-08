@@ -18,13 +18,11 @@ export const Input = ({
   const inputClassname = () => {
     return `${styles.inputWrapper} ${additionalClassname}`;
   };
-
   return (
     <div className={inputClassname()}>
       <label htmlFor={id} className={additionalClassname}>
         {label}
       </label>
-
       <MaskedInput
         id={id}
         mask={mask}
@@ -35,8 +33,9 @@ export const Input = ({
         onChange={onChange}
         {...rest}
       />
-
-      {{ errorMessage } && <span className={styles.error}>{errorMessage}</span>}
+      {Boolean(errorMessage?.length) && (
+        <span className={styles.error}>{errorMessage}</span>
+      )}
     </div>
   );
 };

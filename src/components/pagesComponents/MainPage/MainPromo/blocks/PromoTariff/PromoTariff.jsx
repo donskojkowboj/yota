@@ -2,8 +2,8 @@ import {
   Card,
   commonCardStyles,
 } from '../../../../../UIComponents/Card/index.js';
-import styles from '../../MainPromo.module.scss';
 import { Button } from '../../../../../UIComponents/Button/index.js';
+import styles from './PromoTariff.module.scss';
 
 export const PromoTariff = () => {
   return (

@@ -6,7 +6,7 @@ import { ArrowBottomIcon } from '../../../../../UIComponents/Icons';
 import { Input } from '../../../../../UIComponents/Input';
 import { phoneMask, currencyMask } from './helpers/maskedInputsConfigs';
 
-import styles from '../../MainPromo.module.scss';
+import styles from './PromoPay.module.scss';
 
 export const PromoPay = () => {
   const [sum, setSum] = useState('');
