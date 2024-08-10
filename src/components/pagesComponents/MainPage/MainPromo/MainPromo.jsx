@@ -1,3 +1,4 @@
+import { Container } from '../../../pagesComponents/Container';
 import { PromoPay } from './blocks/PromoPay';
 import { PromoSlider } from './blocks/PromoSlider';
 import { PromoTariff } from './blocks/PromoTariff';
@@ -9,18 +10,20 @@ import styles from './MainPromo.module.scss';
 
 export const MainPromo = () => {
   return (
-    <div>
-      <h1 className={styles.title}>
-        можно. <span>yota</span>
-      </h1>
-      <PromoSlider />
-      <div className={styles.grid}>
-        <PromoPay />
-        <PromoTariff />
-        <PromoNumber />
-        <PromoInternet />
-        <PromoShop />
-      </div>
-    </div>
+    <section className={styles.mainPromo}>
+      <Container>
+        <h1 className={styles.title}>
+          можно. <span>yota</span>
+        </h1>
+        <PromoSlider />
+        <div className={styles.grid}>
+          <PromoPay />
+          <PromoTariff />
+          <PromoNumber />
+          <PromoInternet />
+          <PromoShop />
+        </div>
+      </Container>
+    </section>
   );
 };

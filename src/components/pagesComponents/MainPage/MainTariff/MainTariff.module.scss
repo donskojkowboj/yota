@@ -12,15 +12,13 @@
   line-height: 1.1;
   &__create {
     color: $text-color-secondary;
+    margin: 0 8px;
   }
 }
 
 .cardsWrapper {
   margin-top: 60px;
+  display: flex;
   justify-content: center;
-  display: grid;
-  grid-template-columns: 292px 324px;
-  grid-template-rows: 404px;
-  grid-template-areas: 'create perfect';
   gap: 32px;
 }

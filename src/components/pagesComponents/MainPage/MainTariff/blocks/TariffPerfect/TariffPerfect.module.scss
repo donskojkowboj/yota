@@ -2,29 +2,44 @@
 
 .perfectTariff {
   padding: 24px;
+  width: 324px;
+  height: 404px;
   gap: 40px;
-  grid-area: perfect;
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   height: 100%;
 }
+
 .title {
   color: $text-color-primary;
   font-weight: 600;
   line-height: 22px;
 }
+
+.textContainer {
+  display: flex;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.16;
+  gap: 16px;
+}
+
 .messengers {
   display: flex;
   align-items: flex-start;
 }
+
 .calls {
   display: flex;
   gap: 10px;
   max-width: 150px;
 }
+
 .freeCalls {
   font-size: 12px;
   font-weight: 600;
@@ -33,7 +48,7 @@
 .optimal {
   display: flex;
   gap: 8px;
-  align-items: center;
+
   button {
     padding: 0;
 
@@ -48,26 +63,10 @@
   }
 }
 
-.buttonsText {
-  align-self: center;
-  font-size: 12px;
-  font-weight: 600;
-  color: $text-color-primary;
-  line-height: 1.16;
-}
-
-.textContainer {
-  display: flex;
-  align-self: flex-start;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.16;
-  gap: 16px;
-}
-
 .package {
   display: flex;
   align-items: flex-start;
+  text-transform: uppercase;
   gap: 2px;
 }
 
@@ -77,6 +76,37 @@
   color: $text-color-secondary;
   line-height: 1;
   letter-spacing: -0.96px;
+}
+
+.bottomWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.buttonsText {
+  align-self: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: $text-color-primary;
+  line-height: 1.16;
+}
+
+.sum {
+  display: flex;
+  align-items: flex-start;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.27;
+  color: $text-color-secondary;
+}
+
+.ruble {
+  color: $text-color-primary;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.37;
 }
 
 .tooltip {
@@ -112,26 +142,4 @@
       fill: $btn-outline-bg-hover;
     }
   }
-}
-
-.bottomWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.sum {
-  display: flex;
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 1.27;
-  align-items: flex-start;
-  color: $text-color-secondary;
-}
-
-.ruble {
-  color: $text-color-primary;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.37;
 }
