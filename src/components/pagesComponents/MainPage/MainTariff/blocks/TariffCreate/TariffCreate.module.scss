@@ -1,0 +1,23 @@
+@import '../../../../../../styles/variables.scss';
+
+.createTariff {
+  padding: 24px;
+  width: 292px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: create;
+}
+.title {
+  color: $text-color-secondary;
+  font-size: 24px;
+  max-width: 150px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.img {
+  width: 172px;
+  height: auto;
+  scale: 1.3;
+}

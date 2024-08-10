@@ -1,14 +1,11 @@
-import { Container } from '../../pagesComponents/Container';
 import { MainPromo } from '../../pagesComponents/MainPage/MainPromo';
-
-import styles from './MainPage.module.scss';
+import { MainTariff } from '../../pagesComponents/MainPage/MainTariff';
 
 export const MainPage = () => {
   return (
-    <section className={styles.mainPromo}>
-      <Container>
-        <MainPromo />
-      </Container>
-    </section>
+    <>
+      <MainPromo />
+      <MainTariff />
+    </>
   );
 };
