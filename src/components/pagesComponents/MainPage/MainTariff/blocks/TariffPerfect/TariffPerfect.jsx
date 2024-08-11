@@ -18,13 +18,8 @@ export const TariffPerfect = () => {
   return (
     <Card variant="outline" additionalClassname={styles.perfectTariff}>
       <h2 className={styles.title}>Идеальный тариф</h2>
-      <Tooltip
-        icon={<TooltipIcon />}
-        additionalClassname={`${styles.tooltip} ${styles.tooltip__info}`}
-      >
-        <div className={styles.tooltip__text}>
-          Нереально информативный текст
-        </div>
+      <Tooltip icon={<TooltipIcon />} additionalClassname={styles.info}>
+        Нереально информативный текст
       </Tooltip>
       <div className={styles.wrapper}>
         <div className={styles.textContainer}>
@@ -46,17 +41,15 @@ export const TariffPerfect = () => {
         </div>
 
         <div className={styles.optimal}>
-          <Toggle id="toggle" checked={isChecked} onChange={handleToggle} />
-          <div className={styles.buttonsText}>Оптимальная скорость</div>
+          <Toggle id="toggle" checked={isChecked} onChange={handleToggle}>
+            Оптимальная скорость
+          </Toggle>
+
           <Tooltip
-            additionalClassname={`${styles.tooltip} ${styles.tooltip__question}`}
             icon={<QuestionIcon />}
+            additionalClassname={styles.question}
           >
-            <div
-              className={`${styles.tooltip__text} ${styles.tooltip__text_question}`}
-            >
-              Еще один ответ на вопрос
-            </div>
+            Еще один ответ на вопрос
           </Tooltip>
         </div>
 
