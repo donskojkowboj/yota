@@ -11,8 +11,13 @@
   visibility: hidden;
 }
 
+.label {
+  display: flex;
+}
+
 .toggleBackground {
   display: flex;
+  justify-content: space-around;
   position: relative;
   cursor: pointer;
   width: 30px;

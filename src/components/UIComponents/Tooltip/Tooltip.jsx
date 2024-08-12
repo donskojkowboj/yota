@@ -6,7 +6,7 @@ export const Tooltip = ({
   children,
   additionalClassname,
 }) => {
-  let tooltipClassname = `${styles.tooltip} ${additionalClassname}`;
+  const tooltipClassname = `${styles.tooltip} ${additionalClassname}`;
 
   return (
     <span className={tooltipClassname}>
