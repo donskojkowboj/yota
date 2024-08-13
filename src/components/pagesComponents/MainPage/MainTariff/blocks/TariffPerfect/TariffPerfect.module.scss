@@ -47,20 +47,8 @@
 
 .optimal {
   display: flex;
+  align-items: center;
   gap: 8px;
-
-  button {
-    padding: 0;
-
-    &:hover {
-      svg path {
-        fill: $text-color-descr;
-      }
-      circle {
-        fill: $btn-outline-bg-hover;
-      }
-    }
-  }
 }
 
 .package {
@@ -85,14 +73,6 @@
   align-self: stretch;
 }
 
-.buttonsText {
-  align-self: center;
-  font-size: 12px;
-  font-weight: 600;
-  color: $text-color-primary;
-  line-height: 1.16;
-}
-
 .sum {
   display: flex;
   align-items: flex-start;
@@ -109,10 +89,7 @@
   line-height: 1.37;
 }
 
-.tooltip {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+.btn {
   svg path,
   circle {
     transition: all 0.3s ease-in-out;
@@ -128,18 +105,15 @@
   }
 }
 
-.btn {
-  svg path,
-  circle {
-    transition: all 0.3s ease-in-out;
-  }
+.info {
+  position: absolute;
+  padding: 16px;
+  top: 0;
+  right: 0;
+}
 
-  &:hover {
-    svg path {
-      fill: $text-color-descr;
-    }
-    circle {
-      fill: $btn-outline-bg-hover;
-    }
-  }
+.question {
+  position: relative;
+  transform: translateX(-10px);
+  padding: 10px;
 }

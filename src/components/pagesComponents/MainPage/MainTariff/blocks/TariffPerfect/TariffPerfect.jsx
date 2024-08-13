@@ -1,23 +1,26 @@
-import { Card } from '../../../../../UIComponents/Card/index.js';
-import { Button } from '../../../../../UIComponents/Button/index.js';
-import {
-  QuestionIcon,
-  ToggleIcon,
-  TooltipIcon,
-} from '../../../../../UIComponents/Icons';
+import { useState } from 'react';
+
+import { Card } from '../../../../../UIComponents/Card';
+import { Button } from '../../../../../UIComponents/Button';
+import { QuestionIcon, TooltipIcon } from '../../../../../UIComponents/Icons';
+import { Tooltip } from '../../../../../UIComponents/Tooltip';
+import { Toggle } from '../../../../../UIComponents/Toggle';
 
 import styles from './TariffPerfect.module.scss';
 
 export const TariffPerfect = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleToggle = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
     <Card variant="outline" additionalClassname={styles.perfectTariff}>
       <h2 className={styles.title}>Идеальный тариф</h2>
-      <Button
-        iconLeft={<TooltipIcon />}
-        variant="clear"
-        additionalClassname={styles.tooltip}
-      />
-
+      <Tooltip additionalClassname={styles.info}>
+        Нереально информативный текст
+      </Tooltip>
       <div className={styles.wrapper}>
         <div className={styles.textContainer}>
           <div className={styles.package}>
@@ -38,17 +41,18 @@ export const TariffPerfect = () => {
         </div>
 
         <div className={styles.optimal}>
-          <Button
-            additionalClassname={styles.btn}
-            variant="clear"
-            iconLeft={<ToggleIcon />}
+          <Toggle
+            title="Оптимальная скорость"
+            checked={isChecked}
+            onChange={handleToggle}
           />
-          <div className={styles.buttonsText}>Оптимальная скорость</div>
-          <Button
-            additionalClassname={styles.btn}
-            variant="clear"
-            iconLeft={<QuestionIcon />}
-          />
+
+          <Tooltip
+            icon={<QuestionIcon />}
+            additionalClassname={styles.question}
+          >
+            Еще один ответ на вопрос
+          </Tooltip>
         </div>
 
         <div className={styles.bottomWrapper}>

@@ -1,0 +1,56 @@
+@import '../../../styles/variables.scss';
+
+.toggle {
+  height: 0;
+  width: 0;
+  margin: 0;
+  visibility: hidden;
+}
+
+.label {
+  display: flex;
+}
+
+.toggleBackground {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  background: $border-color;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+
+.toggleButton {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  box-shadow: 0 3px 2px $shadow-toggle;
+  transition: all 0.2s linear;
+  background: $bg-color-primary;
+  border-radius: 50%;
+}
+
+.toggle:checked + .toggleBackground .toggleButton {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+}
+
+.toggle:checked + .toggleBackground {
+  background-color: $bg-color-tertiary;
+}
+
+.text {
+  position: relative;
+  cursor: pointer;
+  align-self: center;
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: $text-color-primary;
+  line-height: 1.16;
+}

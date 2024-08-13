@@ -1,0 +1,35 @@
+@import '../../../styles/variables.scss';
+
+.tooltip {
+  svg path,
+  circle {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__text {
+    position: absolute;
+    display: none;
+    padding: 10px 15px;
+    bottom: 90%;
+    width: max-content;
+    left: 30px;
+    font-size: 13px;
+    color: $text-color-primary;
+    font-weight: 600;
+    line-height: 1.5;
+    background-color: $bg-color-secondary;
+    border: 1px solid $border-color;
+  }
+
+  &:hover {
+    .tooltip__text {
+      display: block;
+    }
+    svg path {
+      fill: $text-color-descr;
+    }
+    circle {
+      fill: $btn-outline-bg-hover;
+    }
+  }
+}
