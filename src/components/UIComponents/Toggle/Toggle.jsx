@@ -2,10 +2,9 @@ import styles from './Toggle.module.scss';
 
 export const Toggle = ({ checked, onChange, title }) => {
   return (
-    <label className={styles.label} htmlFor={title}>
+    <label className={styles.label}>
       <input
         className={styles.toggle}
-        id={title}
         checked={checked}
         onChange={onChange}
         type="checkbox"
