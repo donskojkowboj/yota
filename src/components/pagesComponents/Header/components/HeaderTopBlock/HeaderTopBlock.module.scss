@@ -15,3 +15,9 @@
   width: 100%;
   justify-content: space-between;
 }
+
+@media (max-width: 1024px) {
+  .headerTopBlock {
+    gap: 96px;
+  }
+}

@@ -4,7 +4,10 @@ import { LogoIcon } from './LogoIcon';
 import { LocationIcon } from './LocationIcon';
 import { TooltipIcon } from './TooltipIcon';
 import { QuestionIcon } from './QuestionIcon';
-import { ToggleIcon } from './ToggleIcon.jsx';
+import { ToggleIcon } from './ToggleIcon';
+import { UserIconMobile } from './UserIconMobile';
+import { BurgerIcon } from './BurgerIcon';
+
 export {
   UserIcon,
   ArrowBottomIcon,
@@ -13,4 +16,6 @@ export {
   TooltipIcon,
   QuestionIcon,
   ToggleIcon,
+  UserIconMobile,
+  BurgerIcon,
 };

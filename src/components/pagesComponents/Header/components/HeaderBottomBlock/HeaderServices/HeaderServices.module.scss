@@ -1,6 +1,9 @@
 .headerServices {
   display: flex;
   gap: 40px;
+  button {
+    padding: 0;
+  }
 }
 
 .servicesButton {

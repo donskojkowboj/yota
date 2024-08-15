@@ -1,4 +1,17 @@
 .headerContainer {
-  width: 1320px;
+  max-width: 1320px;
   margin: 0 auto;
+}
+
+@media (max-width: 1330px) {
+  .headerContainer {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .headerContainer {
+    max-width: 912px;
+    padding: 0;
+  }
 }

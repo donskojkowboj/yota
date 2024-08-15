@@ -32,3 +32,11 @@
     background-color: $bg-color-primary;
   }
 }
+
+@media (max-width: 768px) {
+  .active {
+    &:after {
+      background-color: $btn-blue;
+    }
+  }
+}

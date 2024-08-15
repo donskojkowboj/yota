@@ -1,0 +1,28 @@
+.headerMobile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnsWrapper {
+  display: flex;
+  gap: 33px;
+  button {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerMobile {
+    max-width: 730px;
+    margin: 0 auto;
+    padding: 16px 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .headerMobile {
+    max-width: 327px;
+    margin: 0 auto;
+    padding: 16px 0;
+  }
+}

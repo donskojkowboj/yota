@@ -1,3 +1,18 @@
 .netShop {
   grid-area: shop;
 }
+
+@media (max-width: 768px) {
+  .netShop {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    &__button {
+      width: 144px;
+      margin-top: 0;
+    }
+    &__img {
+      margin-top: -5px;
+    }
+  }
+}

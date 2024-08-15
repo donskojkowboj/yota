@@ -20,6 +20,8 @@ export const Button = ({
         return styles.outline;
       case 'outline-dark':
         return styles.outlineDark;
+      case 'outline-white':
+        return styles.outlineWhite;
       case 'clear':
       default:
         return '';

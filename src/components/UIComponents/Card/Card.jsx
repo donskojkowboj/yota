@@ -19,6 +19,8 @@ export const Card = ({
 
       case 'shadow':
         return styles.shadow;
+      case 'lightblue':
+        return styles.lightblue;
 
       default:
         return '';

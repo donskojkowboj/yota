@@ -1,3 +1,4 @@
+import { useWindowWidth } from '@react-hook/window-size/throttled';
 import {
   Card,
   commonCardStyles,
@@ -6,6 +7,7 @@ import { Button } from '../../../../../UIComponents/Button/index.js';
 import styles from './PromoTariff.module.scss';
 
 export const PromoTariff = () => {
+  const width = useWindowWidth();
   return (
     <Card
       variant="grey"
@@ -19,8 +21,12 @@ export const PromoTariff = () => {
             Выбери из готовых тарифов или создай свой
           </div>
         </div>
-        <Button additionalClassname={commonCardStyles.btn} variant="outline">
-          Выбрать
+        <Button
+          size={width <= 768 ? 'small' : 'medium'}
+          additionalClassname={commonCardStyles.btn}
+          variant="outline"
+        >
+          {width <= 768 ? 'Перейти в чат' : 'Выбрать'}
         </Button>
       </div>
 

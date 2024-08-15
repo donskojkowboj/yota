@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Card } from '../../../../../UIComponents/Card';
 import { Button } from '../../../../../UIComponents/Button';
-import { QuestionIcon, TooltipIcon } from '../../../../../UIComponents/Icons';
+import { QuestionIcon } from '../../../../../UIComponents/Icons';
 import { Tooltip } from '../../../../../UIComponents/Tooltip';
 import { Toggle } from '../../../../../UIComponents/Toggle';
 
@@ -31,12 +31,20 @@ export const TariffPerfect = () => {
           </div>
         </div>
         <div className={styles.messengers}>
-          <img src="/src/assets/images/messengers.svg" alt="messengers" />
+          <img
+            className={styles.messengers__img}
+            src="/src/assets/images/messengers.svg"
+            alt="messengers"
+          />
           <img src="/src/assets/images/unlimited-symbol.svg" alt="unlimited" />
         </div>
 
         <div className={styles.calls}>
-          <img src="/src/assets/images/yota_icons.svg" alt="calls" />
+          <img
+            className={styles.calls__img}
+            src="/src/assets/images/yota_icons.svg"
+            alt="calls"
+          />
           <div className={styles.freeCalls}>Бесплатные звонки на Yota</div>
         </div>
 
@@ -60,7 +68,9 @@ export const TariffPerfect = () => {
             570 <span className={styles.ruble}>₽</span>
           </div>
 
-          <Button size="small">Купить</Button>
+          <Button additionalClassname={styles.btn} size="small">
+            Купить
+          </Button>
         </div>
       </div>
     </Card>

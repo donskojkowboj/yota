@@ -16,10 +16,12 @@
     margin-top: 24px;
   }
   &__sum {
-    width: 130px;
+    max-width: 130px;
   }
   &__tel {
-    width: 342px;
+    max-width: 342px;
+    min-width: 200px;
+    width: 100%;
   }
 }
 
@@ -32,6 +34,36 @@
     color: $btn-blue-hover;
     svg path {
       fill: $btn-blue-hover;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .clearBlue {
+    font-size: 22px;
+  }
+}
+@media (max-width: 768px) {
+  .form {
+    &__title {
+      display: block;
+    }
+    &__wrapper {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .clearBlue {
+      font-size: 18px;
+    }
+
+    &__sum {
+      font-size: 12px;
+      width: 75px;
+    }
+    &__tel {
+      width: fit-content;
+      font-size: 12px;
     }
   }
 }

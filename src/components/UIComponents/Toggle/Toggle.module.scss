@@ -54,3 +54,9 @@
   color: $text-color-primary;
   line-height: 1.16;
 }
+
+@media (max-width: 768px) {
+  .text {
+    width: 100px;
+  }
+}

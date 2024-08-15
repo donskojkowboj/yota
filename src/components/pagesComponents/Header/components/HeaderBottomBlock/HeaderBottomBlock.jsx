@@ -1,27 +1,27 @@
+import { useWindowWidth } from '@react-hook/window-size/throttled';
+
 import { HeaderLogo } from './HeaderLogo';
 import { HeaderServices } from './HeaderServices';
 import { HeaderAccount } from './HeaderAccount';
 import { Button } from '../../../../UIComponents/Button';
-import styles from './HeaderBottomBlock.module.scss';
 import commonStyles from '../../Header.module.scss';
+import styles from './HeaderBottomBlock.module.scss';
 
 export const HeaderBottomBlock = () => {
-  const handleClick = () => {
-    console.log('Проверка кнопки');
-  };
-
+  const width = useWindowWidth();
   return (
     <div className={commonStyles.headerContainer}>
       <div className={styles.headerBottomBlock}>
         <HeaderLogo />
         <div className={styles.wrapper}>
           <HeaderServices />
-          <Button
-            additionalClassname={styles.headerButton}
-            onClick={() => handleClick()}
-          >
-            Заказать SIM-карту
-          </Button>
+
+          {width > 1250 ? (
+            <Button additionalClassname={styles.headerButton}>
+              Заказать SIM-карту
+            </Button>
+          ) : null}
+
           <HeaderAccount />
         </div>
       </div>

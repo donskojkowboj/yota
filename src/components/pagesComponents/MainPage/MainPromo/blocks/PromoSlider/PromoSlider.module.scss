@@ -30,3 +30,17 @@
     transform: translateX(-50%);
   }
 }
+
+@media (max-width: 1024px) {
+  .promoSlider {
+    padding: 25px 0 43px 38px;
+    &__img {
+      width: 290px;
+      margin-right: 40px;
+    }
+    button {
+      width: 226px;
+      height: 40px;
+    }
+  }
+}

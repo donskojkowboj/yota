@@ -77,3 +77,67 @@
     border-color: $btn-outlineDark-hover;
   }
 }
+
+.outlineWhite {
+  @include baseButton;
+  border-color: $btn-white;
+  color: $btn-white;
+
+  &:hover {
+    color: $btn-primary-hover;
+    background-color: $btn-outline-bg-hover;
+  }
+}
+
+@media (max-width: 1024px) {
+  .medium {
+    padding: 9px 34px;
+    line-height: 1.16;
+  }
+
+  .small {
+    padding: 8px 15px;
+    line-height: 1.16;
+  }
+}
+
+@media (max-width: 768px) {
+  @mixin baseButton {
+    border: 1px solid transparent;
+    font-size: 12px;
+  }
+
+  .blue {
+    @include baseButton;
+    background-color: $btn-blue;
+  }
+
+  .white {
+    @include baseButton;
+    background-color: $btn-white;
+  }
+
+  .outline {
+    @include baseButton;
+    border-color: $btn-outline;
+  }
+
+  .outlineDark {
+    @include baseButton;
+    border-color: $btn-outlineDark;
+  }
+
+  .outlineWhite {
+    @include baseButton;
+    border-color: $btn-white;
+  }
+  .medium {
+    padding: 8px 20px;
+    line-height: 1.16;
+  }
+
+  .small {
+    padding: 8px 15px;
+    line-height: 1.16;
+  }
+}

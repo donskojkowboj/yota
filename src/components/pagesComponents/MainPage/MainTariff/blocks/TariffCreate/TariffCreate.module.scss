@@ -20,3 +20,46 @@
   height: auto;
   scale: 1.3;
 }
+
+@media (max-width: 1024px) {
+  .createTariff {
+    width: 255px;
+  }
+  .img {
+    width: 160px;
+    scale: 1.2;
+  }
+}
+
+@media (max-width: 768px) {
+  .createTariff {
+    padding: 20px;
+    width: 343px;
+    height: 126px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .title {
+    color: $text-color-tertiary;
+    font-size: 16px;
+    max-width: 90px;
+    text-align: left;
+    line-height: 1.37;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .btn {
+    width: 90px;
+  }
+  .img {
+    width: 108px;
+    margin-right: 20px;
+    scale: 1.2;
+  }
+}

@@ -38,3 +38,53 @@
   margin-top: auto;
   width: 200px;
 }
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 22px;
+    line-height: 1.27;
+    &__big {
+      font-size: 32px;
+      line-height: 1.31;
+    }
+  }
+
+  .description {
+    font-size: 16px;
+    max-width: 300px;
+    line-height: 1.5;
+  }
+
+  .img {
+    position: relative;
+    width: 142px;
+    margin-top: -26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.33;
+  }
+  .img {
+    position: relative;
+    width: 90px;
+    margin-top: -20px;
+    margin-left: -10px;
+  }
+  .description {
+    display: none;
+    &__big {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    max-height: 30px;
+    justify-content: center;
+  }
+}

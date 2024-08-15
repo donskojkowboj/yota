@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '../../../../../UIComponents/Button';
 import { CarouselControl } from '../../../../../UIComponents/CarouselControl';
 import { Card, commonCardStyles } from '../../../../../UIComponents/Card';
@@ -6,6 +8,24 @@ import styles from './PromoSlider.module.scss';
 export const PromoSlider = () => {
   const promoSliderTitle = `${commonCardStyles.title} ${commonCardStyles.title__big} ${commonCardStyles.title__white}`;
   const promoSliderDescription = `${commonCardStyles.description} ${commonCardStyles.description__big} ${commonCardStyles.description__white}`;
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [clickTrigger, setClickTrigger] = useState(0);
+  const totalButtons = 5;
+
+  const handleNext = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % totalButtons);
+  };
+
+  const handleControlClick = (index) => {
+    setActiveIndex(index);
+    setClickTrigger((prev) => prev + 1);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(handleNext, 4000);
+    return () => clearInterval(interval);
+  }, [clickTrigger]);
 
   return (
     <Card variant="blue" additionalClassname={styles.promoSlider}>
@@ -18,7 +38,9 @@ export const PromoSlider = () => {
             </div>
           </div>
 
-          <Button variant="white">Заказать SIM-карту</Button>
+          <Button additionalClassname={styles.btn} variant="white">
+            Заказать SIM-карту
+          </Button>
         </div>
         <img
           className={styles.promoSlider__img}
@@ -27,11 +49,13 @@ export const PromoSlider = () => {
         />
       </div>
       <div className={styles.promoSlider__carouselButtons}>
-        <CarouselControl variant="active" />
-        <CarouselControl />
-        <CarouselControl />
-        <CarouselControl />
-        <CarouselControl />
+        {[...Array(totalButtons)].map((_, index) => (
+          <CarouselControl
+            onClick={() => handleControlClick(index)}
+            key={index}
+            variant={index === activeIndex ? 'active' : undefined}
+          />
+        ))}
       </div>
     </Card>
   );

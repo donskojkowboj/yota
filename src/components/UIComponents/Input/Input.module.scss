@@ -27,3 +27,33 @@
   font-size: 14px;
   padding: 0 4px;
 }
+
+@media (max-width: 1024px) {
+  .inputWrapper {
+    input {
+      border-radius: 8px;
+      padding: 13px 18px;
+      //font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    color: $text-color-descr;
+    gap: 4px;
+    label {
+      padding: 0;
+    }
+    input {
+      border-radius: 8px;
+      padding: 4px 12px;
+      font-size: 16px;
+    }
+  }
+  .error {
+    font-size: 12px;
+  }
+}

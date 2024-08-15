@@ -7,8 +7,10 @@ import { Input } from '../../../../../UIComponents/Input';
 import { phoneMask, currencyMask } from './helpers/maskedInputsConfigs';
 
 import styles from './PromoPay.module.scss';
+import { useWindowWidth } from '@react-hook/window-size/throttled';
 
 export const PromoPay = () => {
+  const width = useWindowWidth();
   const [sum, setSum] = useState('');
   const [phone, setPhone] = useState('');
   const [errors, setErrors] = useState({});
@@ -38,12 +40,15 @@ export const PromoPay = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     formValidation(sum, phone);
+    setSum('');
+    setPhone('');
   };
 
   return (
     <Card
-      variant="grey"
+      variant={width <= 768 ? 'lightblue' : 'grey'}
       direction="horizontal"
       additionalClassname={styles.form}
     >
