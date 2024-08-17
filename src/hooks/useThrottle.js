@@ -1,24 +1,11 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 
 export const useThrottle = (callback, delay = 1000) => {
-  const shouldWait = useRef(false);
-  const timerId = useRef(null);
-
-  useEffect(() => {
-    return () => {
-      if (timerId.current) {
-        clearTimeout(timerId.current);
-      }
-    };
-  }, []);
-
+  const lastRun = useRef(Date.now());
   return () => {
-    if (shouldWait.current) return;
-    callback();
-
-    shouldWait.current = true;
-    timerId.current = setTimeout(() => {
-      shouldWait.current = false;
-    }, delay);
+    if (Date.now() - lastRun.current >= delay) {
+      callback();
+      lastRun.current = Date.now();
+    }
   };
 };
