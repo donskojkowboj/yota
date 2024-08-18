@@ -20,8 +20,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .headerSelectClient {
-    display: flex;
+    gap: 20px;
   }
 }

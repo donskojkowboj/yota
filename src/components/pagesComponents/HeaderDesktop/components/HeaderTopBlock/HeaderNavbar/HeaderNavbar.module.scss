@@ -3,6 +3,12 @@
   gap: 40px;
 }
 
+@media (max-width: 900px) {
+  .navbarList {
+    gap: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbarList {
     flex-direction: column;

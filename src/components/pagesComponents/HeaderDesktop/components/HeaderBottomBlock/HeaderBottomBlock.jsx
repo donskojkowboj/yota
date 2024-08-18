@@ -15,7 +15,7 @@ export const HeaderBottomBlock = () => {
         <HeaderLogo />
         <div className={styles.wrapper}>
           <HeaderServices />
-          {width > 1200 ? (
+          {width > 1210 ? (
             <Button additionalClassname={styles.headerButton}>
               Заказать SIM-карту
             </Button>
