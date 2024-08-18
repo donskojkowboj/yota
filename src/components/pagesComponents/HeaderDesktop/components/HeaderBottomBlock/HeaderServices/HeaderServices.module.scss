@@ -1,0 +1,17 @@
+.headerServices {
+  display: flex;
+  gap: 40px;
+}
+
+.servicesButton {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .headerServices {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

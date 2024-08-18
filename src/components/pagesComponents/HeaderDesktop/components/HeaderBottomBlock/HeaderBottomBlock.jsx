@@ -5,7 +5,7 @@ import { HeaderServices } from './HeaderServices';
 import { HeaderAccount } from './HeaderAccount';
 import { Button } from '../../../../UIComponents/Button';
 import styles from './HeaderBottomBlock.module.scss';
-import commonStyles from '../../Header.module.scss';
+import commonStyles from '../../HeaderDesktop.module.scss';
 
 export const HeaderBottomBlock = () => {
   const [width] = useWindowSize();

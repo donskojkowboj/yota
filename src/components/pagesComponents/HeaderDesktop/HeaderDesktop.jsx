@@ -1,8 +1,8 @@
 import { HeaderTopBlock } from './components/HeaderTopBlock';
 import { HeaderBottomBlock } from './components/HeaderBottomBlock';
-import styles from './Header.module.scss';
+import styles from './HeaderDesktop.module.scss';
 
-export const Header = () => {
+export const HeaderDesktop = () => {
   return (
     <header className={styles.header}>
       <HeaderTopBlock />

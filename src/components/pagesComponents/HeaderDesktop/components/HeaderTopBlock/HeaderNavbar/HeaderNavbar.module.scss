@@ -1,0 +1,15 @@
+.navbarList {
+  display: flex;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .navbarList {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .navbarItem {
+    align-self: flex-start;
+  }
+}

@@ -19,3 +19,9 @@
     background-color: $bg-color-tertiary;
   }
 }
+
+@media (max-width: 768px) {
+  .headerSelectClient {
+    display: flex;
+  }
+}

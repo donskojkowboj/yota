@@ -3,7 +3,7 @@ import styles from './HeaderNavbar.module.scss';
 
 export const HeaderNavbar = () => {
   return (
-    <nav className={styles.headerNavbar}>
+    <nav>
       <ul className={styles.navbarList}>
         <li className={styles.navbarItem}>
           <Link href="#">Поддержка</Link>
