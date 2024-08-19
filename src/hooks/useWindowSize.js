@@ -1,22 +1,22 @@
 import { useState, useEffect } from 'react';
-import { useThrottle } from './useThrottle.js';
+import { Breakpoints } from '../../lib/breakpoints.js';
 
 export const useWindowSize = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
+  const isMobile = width <= Breakpoints.md;
+  const isDesktop = width <= Breakpoints.xl;
 
-  const onResize = useThrottle(() => {
+  const onResize = () => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
-  }, 200);
+  };
 
   useEffect(() => {
     window.addEventListener('resize', onResize);
-    console.log('resize');
     return () => {
       window.removeEventListener('resize', onResize);
-      console.log('return');
     };
-  }, [width]);
-  return [width, height];
+  }, []);
+  return { width, height, isMobile, isDesktop };
 };

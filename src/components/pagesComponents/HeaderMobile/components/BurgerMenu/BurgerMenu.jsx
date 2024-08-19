@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { HeaderSelectCity } from '../../../HeaderDesktop/components/HeaderTopBlock/HeaderSelectCity';
 import { HeaderSelectClient } from '../../../HeaderDesktop/components/HeaderTopBlock/HeaderSelectClient/index.js';
 import { Button } from '../../../../UIComponents/Button/index.js';
@@ -23,6 +22,7 @@ export const BurgerMenu = ({ closeMenu }) => {
           iconLeft={<CloseMenuIcon />}
         />
       </div>
+
       <div className={styles.innerWrapper}>
         <HeaderSelectCity />
         <HeaderSelectClient />

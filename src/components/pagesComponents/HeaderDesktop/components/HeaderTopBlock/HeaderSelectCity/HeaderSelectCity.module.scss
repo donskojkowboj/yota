@@ -11,3 +11,9 @@
   line-height: 1.42;
   padding: 0;
 }
+
+@media (max-width: 960px) {
+  .headerSelectCity {
+    align-self: center;
+  }
+}

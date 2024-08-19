@@ -13,10 +13,11 @@ export const HeaderMobile = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    document.body.style.overflow = 'hidden';
   };
-
   const closeMenu = () => {
     setIsMenuOpen(false);
+    document.body.style.overflow = 'unset';
   };
   return (
     <header className={styles.headerMobile}>
