@@ -1,0 +1,23 @@
+@import '../../../../../../styles/variables';
+
+.border {
+  border-bottom: 1px solid $border-color;
+}
+
+.headerTopBlock {
+  display: flex;
+  gap: 109px;
+  padding: 15px 0;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .headerTopBlock {
+    gap: 96px;
+  }
+}

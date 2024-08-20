@@ -5,7 +5,7 @@ export const useWindowSize = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
   const isMobile = width <= Breakpoints.md;
-  const isDesktop = width <= Breakpoints.xl;
+  const isTablet = width <= Breakpoints.xl && width > Breakpoints.md;
 
   const onResize = () => {
     setWidth(window.innerWidth);
@@ -18,5 +18,5 @@ export const useWindowSize = () => {
       window.removeEventListener('resize', onResize);
     };
   }, []);
-  return { width, height, isMobile, isDesktop };
+  return { width, height, isMobile, isTablet };
 };

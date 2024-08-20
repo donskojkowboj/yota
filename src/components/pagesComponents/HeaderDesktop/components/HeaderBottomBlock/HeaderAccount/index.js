@@ -1,1 +1,0 @@
-export { HeaderAccount } from './HeaderAccount';

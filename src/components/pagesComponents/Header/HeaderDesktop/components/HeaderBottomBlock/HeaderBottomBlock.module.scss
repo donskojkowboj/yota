@@ -1,0 +1,26 @@
+@import '../../../../../../styles/variables';
+
+.headerBottomBlock {
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  min-height: 76px;
+  gap: 78px;
+}
+
+.headerButton {
+  max-height: 48px;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .headerBottomBlock {
+    gap: 65px;
+  }
+}
