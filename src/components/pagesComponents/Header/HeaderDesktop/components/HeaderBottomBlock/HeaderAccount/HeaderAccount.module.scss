@@ -1,0 +1,10 @@
+@import '../../../../../../../styles/variables';
+.clearBlue {
+  color: $btn-blue;
+  &:hover {
+    color: $btn-blue-hover;
+    svg path {
+      fill: $btn-blue-hover;
+    }
+  }
+}

@@ -1,12 +1,8 @@
-import { HeaderTopBlock } from './components/HeaderTopBlock';
-import { HeaderBottomBlock } from './components/HeaderBottomBlock';
-import styles from './Header.module.scss';
+import { useWindowSize } from '../../../hooks/useWindowSize.js';
+import { HeaderDesktop } from './HeaderDesktop';
+import { HeaderMobile } from './HeaderMobile';
 
 export const Header = () => {
-  return (
-    <header className={styles.header}>
-      <HeaderTopBlock />
-      <HeaderBottomBlock />
-    </header>
-  );
+  const { isMobile } = useWindowSize();
+  return <>{isMobile ? <HeaderMobile /> : <HeaderDesktop />}</>;
 };
