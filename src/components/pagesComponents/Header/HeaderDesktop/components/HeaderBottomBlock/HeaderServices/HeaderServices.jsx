@@ -6,7 +6,7 @@ export const HeaderServices = () => {
   return (
     <div className={styles.headerServices}>
       <Button
-        additionalClassname={styles.servicesButton}
+        additionalClassname={styles.headerServices__button}
         variant="clear"
         iconRight={<ArrowBottomIcon />}
       >
@@ -14,7 +14,7 @@ export const HeaderServices = () => {
       </Button>
 
       <Button
-        additionalClassname={styles.servicesButton}
+        additionalClassname={styles.headerServices__button}
         variant="clear"
         iconRight={<ArrowBottomIcon />}
       >
@@ -22,14 +22,14 @@ export const HeaderServices = () => {
       </Button>
 
       <Button
-        additionalClassname={styles.servicesButton}
+        additionalClassname={styles.headerServices__button}
         variant="clear"
         iconRight={<ArrowBottomIcon />}
       >
         Сервисы
       </Button>
       <Button
-        additionalClassname={styles.servicesButton}
+        additionalClassname={styles.headerServices__button}
         variant="clear"
         iconRight={<ArrowBottomIcon />}
       >

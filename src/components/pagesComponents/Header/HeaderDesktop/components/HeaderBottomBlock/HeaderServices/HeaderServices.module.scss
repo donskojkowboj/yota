@@ -1,13 +1,10 @@
 .headerServices {
   display: flex;
   gap: 40px;
-  button {
+  &__button {
+    font-size: 14px;
     padding: 0;
   }
-}
-
-.servicesButton {
-  font-size: 14px;
 }
 
 @media (max-width: 960px) {
