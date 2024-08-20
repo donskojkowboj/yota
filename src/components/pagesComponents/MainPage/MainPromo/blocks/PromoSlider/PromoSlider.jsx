@@ -18,7 +18,9 @@ export const PromoSlider = () => {
             </div>
           </div>
 
-          <Button variant="white">Заказать SIM-карту</Button>
+          <Button additionalClassname={styles.promoSlider__btn} variant="white">
+            Заказать SIM-карту
+          </Button>
         </div>
         <img
           className={styles.promoSlider__img}

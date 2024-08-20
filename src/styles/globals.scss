@@ -28,3 +28,9 @@ a {
 section {
   margin-top: 120px;
 }
+
+@media (max-width: 1024px) {
+  section {
+    margin-top: 80px;
+  }
+}

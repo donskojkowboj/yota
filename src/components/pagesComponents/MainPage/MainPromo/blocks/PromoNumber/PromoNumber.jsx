@@ -17,7 +17,10 @@ export const PromoNumber = () => {
           Введите номер для переноса
         </div>
       </div>
-      <Button additionalClassname={commonCardStyles.btn} variant="outline">
+      <Button
+        additionalClassname={`${commonCardStyles.btn} ${commonCardStyles.btn__maxWidth}`}
+        variant="outline"
+      >
         Перейти
       </Button>
     </Card>

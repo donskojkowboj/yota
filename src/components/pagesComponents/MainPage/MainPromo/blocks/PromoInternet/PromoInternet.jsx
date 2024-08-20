@@ -20,7 +20,10 @@ export const PromoInternet = () => {
           4G интернет. Для дома, для офиса, для поездок.
         </div>
       </div>
-      <Button additionalClassname={commonCardStyles.btn} variant="outline">
+      <Button
+        additionalClassname={`${commonCardStyles.btn} ${commonCardStyles.btn__maxWidth}`}
+        variant="outline"
+      >
         Перейти
       </Button>
     </Card>

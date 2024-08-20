@@ -30,3 +30,27 @@
     transform: translateX(-50%);
   }
 }
+
+@media (max-width: 1024px) {
+  .promoSlider {
+    padding: 25px 12px 43px 38px;
+    &__wrapper {
+      max-height: 182px;
+    }
+    &__textWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    &__img {
+      max-width: 307px;
+      height: 220px;
+      margin-top: -20px;
+    }
+    &__btn {
+      height: 40px;
+      width: 226px;
+      padding: unset;
+    }
+  }
+}

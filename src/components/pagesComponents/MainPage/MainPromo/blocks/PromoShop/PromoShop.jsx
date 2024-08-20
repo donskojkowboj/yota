@@ -20,7 +20,10 @@ export const PromoShop = () => {
           Можно купить роутер, модем или интернет-центр для дома и офиса
         </div>
       </div>
-      <Button additionalClassname={commonCardStyles.btn} variant="outline">
+      <Button
+        additionalClassname={`${commonCardStyles.btn} ${commonCardStyles.btn__maxWidth}`}
+        variant="outline"
+      >
         Перейти
       </Button>
     </Card>

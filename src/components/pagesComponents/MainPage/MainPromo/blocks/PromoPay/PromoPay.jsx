@@ -59,7 +59,7 @@ export const PromoPay = () => {
         </Button>
       </h2>
 
-      <form onSubmit={handleSubmit} className={styles.form}>
+      <form onSubmit={handleSubmit} className={styles.form__form}>
         <div className={styles.form__wrapper}>
           <Input
             additionalClassname={styles.form__sum}

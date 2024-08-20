@@ -3,6 +3,7 @@
 .createTariff {
   padding: 24px;
   width: 292px;
+  height: 404px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,4 +20,18 @@
   width: 172px;
   height: auto;
   scale: 1.3;
+}
+
+@media (max-width: 1024px) {
+  .createTariff {
+    height: 376px;
+    width: 255px;
+  }
+  .title {
+    font-size: 22px;
+    line-height: 1.27;
+  }
+  .img {
+    width: 160px;
+  }
 }

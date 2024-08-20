@@ -27,3 +27,14 @@
   font-size: 14px;
   padding: 0 4px;
 }
+
+@media (max-width: 1024px) {
+  .inputWrapper {
+    label {
+      padding: 0;
+    }
+    input {
+      padding: 13px 15px;
+    }
+  }
+}
