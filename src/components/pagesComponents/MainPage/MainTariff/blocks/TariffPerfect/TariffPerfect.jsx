@@ -60,7 +60,9 @@ export const TariffPerfect = () => {
             570 <span className={styles.ruble}>₽</span>
           </div>
 
-          <Button size="small">Купить</Button>
+          <Button additionalClassname={styles.btn} size="small">
+            Купить
+          </Button>
         </div>
       </div>
     </Card>

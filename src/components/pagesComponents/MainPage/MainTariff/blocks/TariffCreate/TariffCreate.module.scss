@@ -8,6 +8,11 @@
   align-items: center;
   justify-content: space-between;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 .title {
   color: $text-color-secondary;
   font-size: 24px;
@@ -33,5 +38,37 @@
   }
   .img {
     width: 160px;
+  }
+}
+
+@media (max-width: 960px) {
+  .createTariff {
+    padding: 20px;
+    width: 343px;
+    height: 126px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .title {
+    color: $text-color-tertiary;
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.37;
+  }
+  .img {
+    width: 108px;
+    scale: 1.2;
+  }
+  .btn {
+    border-color: $bg-color-primary;
+    color: $text-color-tertiary;
+    width: 90px;
+    height: 30px;
   }
 }

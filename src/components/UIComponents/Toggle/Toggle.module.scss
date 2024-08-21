@@ -9,6 +9,7 @@
 
 .label {
   display: flex;
+  align-items: center;
 }
 
 .toggleBackground {
@@ -53,4 +54,10 @@
   font-weight: 600;
   color: $text-color-primary;
   line-height: 1.16;
+}
+
+@media (max-width: 960px) {
+  .toggleBackground {
+    width: 40%;
+  }
 }

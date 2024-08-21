@@ -87,7 +87,9 @@ export const PromoPay = () => {
             onChange={handlePhoneChange}
           />
         </div>
-        <Button additionalClassname={commonCardStyles.btn}>Оплатить</Button>
+        <Button additionalClassname={`${commonCardStyles.btn}`}>
+          Оплатить
+        </Button>
       </form>
     </Card>
   );

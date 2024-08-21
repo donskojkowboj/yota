@@ -1,3 +1,4 @@
+import { useWindowSize } from '../../../../../../hooks/useWindowSize.js';
 import {
   Card,
   commonCardStyles,
@@ -6,6 +7,7 @@ import { Button } from '../../../../../UIComponents/Button/index.js';
 import styles from './PromoTariff.module.scss';
 
 export const PromoTariff = () => {
+  const { isMobile } = useWindowSize();
   return (
     <Card
       variant="grey"
@@ -20,7 +22,7 @@ export const PromoTariff = () => {
           </div>
         </div>
         <Button additionalClassname={commonCardStyles.btn} variant="outline">
-          Выбрать
+          {isMobile ? 'Перейти в чат' : 'Выбрать'}
         </Button>
       </div>
 

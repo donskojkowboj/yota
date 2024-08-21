@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-
+import { useWindowSize } from '../../../../../../hooks/useWindowSize.js';
 import { Card } from '../../../../../UIComponents/Card/index.js';
 import { Button } from '../../../../../UIComponents/Button/index.js';
 import { CarouselControl } from '../../../../../UIComponents/CarouselControl/index.js';
@@ -7,6 +7,8 @@ import { CarouselControl } from '../../../../../UIComponents/CarouselControl/ind
 import styles from './PromoSliderMobile.module.scss';
 
 export const PromoSliderMobile = () => {
+  const { isSmallMobile } = useWindowSize();
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [clickTrigger, setClickTrigger] = useState(0);
   const totalButtons = 5;
@@ -28,111 +30,51 @@ export const PromoSliderMobile = () => {
   return (
     <>
       <div className={styles.carousel}>
-        <Card variant="blue" additionalClassname={styles.promoSlider}>
-          <div className={styles.promoSlider__wrapper}>
-            <div className={styles.promoSlider__textWrapper}>
-              <h2 className={styles.promoSlider__title}>
-                Семейный конструктор
-              </h2>
-              <div className={styles.promoSlider__descr}>
-                Выгода до 15% за объединение номеров в группу
-              </div>
-            </div>
+        <div
+          className={styles.inner}
+          style={
+            isSmallMobile
+              ? {
+                  transform: `translateX(calc(-${activeIndex * 341}px - ${activeIndex * 6}px))`,
+                }
+              : {
+                  transform: `translateX(calc(-${activeIndex * 100}% - ${activeIndex * 6}px))`,
+                }
+          }
+        >
+          {[...Array(totalButtons)].map((_, index) => (
+            <Card
+              key={index}
+              variant="blue"
+              additionalClassname={styles.promoSlider}
+            >
+              <div className={styles.promoSlider__wrapper}>
+                <div className={styles.promoSlider__innerWrapper}>
+                  <div className={styles.promoSlider__textWrapper}>
+                    <h2 className={styles.promoSlider__title}>
+                      Семейный конструктор
+                    </h2>
+                    <div className={styles.promoSlider__descr}>
+                      Выгода до 15% за объединение номеров в группу
+                    </div>
+                  </div>
 
-            <img
-              className={styles.promoSlider__img}
-              src="/src/assets/images/promo-simcards.png"
-              alt="promo"
-            />
-          </div>
-          <Button additionalClassname={styles.promoSlider__btn} variant="white">
-            Заказать SIM-карту
-          </Button>
-        </Card>
-        <Card variant="blue" additionalClassname={styles.promoSlider}>
-          <div className={styles.promoSlider__wrapper}>
-            <div className={styles.promoSlider__textWrapper}>
-              <h2 className={styles.promoSlider__title}>
-                Семейный конструктор
-              </h2>
-              <div className={styles.promoSlider__descr}>
-                Выгода до 15% за объединение номеров в группу
+                  <Button
+                    additionalClassname={styles.promoSlider__btn}
+                    variant="white"
+                  >
+                    Заказать SIM-карту
+                  </Button>
+                </div>
+                <img
+                  className={styles.promoSlider__img}
+                  src="/src/assets/images/promo-simcards.png"
+                  alt="promo"
+                />
               </div>
-            </div>
-
-            <img
-              className={styles.promoSlider__img}
-              src="/src/assets/images/promo-simcards.png"
-              alt="promo"
-            />
-          </div>
-          <Button additionalClassname={styles.promoSlider__btn} variant="white">
-            Заказать SIM-карту
-          </Button>
-        </Card>
-        <Card variant="blue" additionalClassname={styles.promoSlider}>
-          <div className={styles.promoSlider__wrapper}>
-            <div className={styles.promoSlider__textWrapper}>
-              <h2 className={styles.promoSlider__title}>
-                Семейный конструктор
-              </h2>
-              <div className={styles.promoSlider__descr}>
-                Выгода до 15% за объединение номеров в группу
-              </div>
-            </div>
-
-            <img
-              className={styles.promoSlider__img}
-              src="/src/assets/images/promo-simcards.png"
-              alt="promo"
-            />
-          </div>
-          <Button additionalClassname={styles.promoSlider__btn} variant="white">
-            Заказать SIM-карту
-          </Button>
-        </Card>
-        <Card variant="blue" additionalClassname={styles.promoSlider}>
-          <div className={styles.promoSlider__wrapper}>
-            <div className={styles.promoSlider__textWrapper}>
-              <h2 className={styles.promoSlider__title}>
-                Семейный конструктор
-              </h2>
-              <div className={styles.promoSlider__descr}>
-                Выгода до 15% за объединение номеров в группу
-              </div>
-            </div>
-
-            <img
-              className={styles.promoSlider__img}
-              src="/src/assets/images/promo-simcards.png"
-              alt="promo"
-            />
-          </div>
-          <Button additionalClassname={styles.promoSlider__btn} variant="white">
-            Заказать SIM-карту
-          </Button>
-        </Card>
-        <Card variant="blue" additionalClassname={styles.promoSlider}>
-          <div className={styles.promoSlider__wrapper}>
-            <div className={styles.promoSlider__textWrapper}>
-              <h2 className={styles.promoSlider__title}>
-                Семейный конструктор
-              </h2>
-              <div className={styles.promoSlider__descr}>
-                Выгода до 15% за объединение номеров в группу
-              </div>
-            </div>
-
-            <img
-              className={styles.promoSlider__img}
-              src="/src/assets/images/promo-simcards.png"
-              alt="promo"
-            />
-          </div>
-          <Button additionalClassname={styles.promoSlider__btn} variant="white">
-            Заказать SIM-карту
-          </Button>
-        </Card>
+            </Card>
+          ))}
+        </div>
       </div>
 
       <div className={styles.promoSlider__carouselButtons}>

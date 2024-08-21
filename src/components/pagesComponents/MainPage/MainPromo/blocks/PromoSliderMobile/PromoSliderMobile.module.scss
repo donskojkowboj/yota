@@ -1,24 +1,34 @@
 @import '../../../../../../styles/variables.scss';
 .carousel {
+  position: relative;
   display: flex;
-  gap: 8px;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  //flex-basis: 343px;
-  width: 100vw;
-  margin-left: -40px;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  width: 100%;
+}
+.inner {
+  display: flex;
+  gap: 6px;
+  position: relative;
+  transition: transform 1s ease;
+  width: 100%;
 }
 .promoSlider {
-  margin-top: 30px;
-  padding: 20px;
+  margin-top: 40px;
   width: 100%;
-  height: 220px;
-  display: flex;
-  justify-content: space-between;
+  flex: 0 0 100%;
 
   &__wrapper {
     display: flex;
-    gap: 12px;
+    justify-content: space-between;
+    width: 100%;
+    height: 180px;
+  }
+  &__innerWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__textWrapper {
     display: flex;
@@ -36,10 +46,6 @@
     font-size: 12px;
     line-height: 1.5;
   }
-  &__img {
-    max-width: 145px;
-    height: 108px;
-  }
   &__carouselButtons {
     display: flex;
     gap: 6px;
@@ -47,10 +53,34 @@
     margin-top: 12px;
   }
   &__btn {
-    align-self: flex-start;
-    padding: 6px 20px;
-  }
-  button {
     height: 30px;
+    width: 156px;
+    font-size: 12px;
+    padding: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    display: flex;
+    gap: 8px;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    width: 100vw;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .promoSlider {
+    padding: 20px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    flex: 0 0 50%;
+    transform: translateX(-50%);
+    left: 50%;
+    &__img {
+      width: 145px;
+      height: 108px;
+    }
   }
 }

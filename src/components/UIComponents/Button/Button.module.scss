@@ -77,3 +77,21 @@
     border-color: $btn-outlineDark-hover;
   }
 }
+
+@media (max-width: 960px) {
+  @mixin baseButton {
+    border: 1px solid;
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  .medium {
+    padding: 8px 20px;
+  }
+
+  .outline {
+    @include baseButton;
+  }
+  .outlineDark {
+    @include baseButton;
+  }
+}

@@ -32,3 +32,11 @@
     background-color: $bg-color-primary;
   }
 }
+
+@media (max-width: 960px) {
+  .active {
+    &:after {
+      background-color: $bg-color-tertiary;
+    }
+  }
+}
