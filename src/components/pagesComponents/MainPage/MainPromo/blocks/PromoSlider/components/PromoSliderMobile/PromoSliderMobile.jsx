@@ -1,31 +1,18 @@
-import { useEffect, useState } from 'react';
-import { useWindowSize } from '../../../../../../hooks/useWindowSize.js';
-import { Card } from '../../../../../UIComponents/Card/index.js';
-import { Button } from '../../../../../UIComponents/Button/index.js';
-import { CarouselControl } from '../../../../../UIComponents/CarouselControl/index.js';
+import { useWindowSize } from '../../../../../../../../hooks/useWindowSize.js';
+import { Card } from '../../../../../../../UIComponents/Card/index.js';
+import { Button } from '../../../../../../../UIComponents/Button/index.js';
+import { CarouselControl } from '../../../../../../../UIComponents/CarouselControl/index.js';
 
 import styles from './PromoSliderMobile.module.scss';
 
-export const PromoSliderMobile = () => {
+export const PromoSliderMobile = ({
+  totalButtons,
+  handleControlClick,
+  activeIndex,
+}) => {
   const { isSmallMobile } = useWindowSize();
-
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [clickTrigger, setClickTrigger] = useState(0);
-  const totalButtons = 5;
-
-  const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % totalButtons);
-  };
-
-  const handleControlClick = (index) => {
-    setActiveIndex(index);
-    setClickTrigger((prev) => prev + 1);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(handleNext, 4000);
-    return () => clearInterval(interval);
-  }, [clickTrigger]);
+  const translateXSmall = `translateX(calc(-${activeIndex * 341}px - ${activeIndex * 6}px))`;
+  const translateX = `translateX(calc(-${activeIndex * 100}% - ${activeIndex * 6}px))`;
 
   return (
     <>
@@ -35,10 +22,10 @@ export const PromoSliderMobile = () => {
           style={
             isSmallMobile
               ? {
-                  transform: `translateX(calc(-${activeIndex * 341}px - ${activeIndex * 6}px))`,
+                  transform: translateXSmall,
                 }
               : {
-                  transform: `translateX(calc(-${activeIndex * 100}% - ${activeIndex * 6}px))`,
+                  transform: translateX,
                 }
           }
         >

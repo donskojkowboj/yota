@@ -8,6 +8,12 @@
   line-height: 1.37;
 }
 
+@mixin baseButtonMobile {
+  border: 1px solid;
+  font-size: 12px;
+  line-height: 1.16;
+}
+
 .button {
   background-color: transparent;
   border: none;
@@ -79,19 +85,14 @@
 }
 
 @media (max-width: 960px) {
-  @mixin baseButton {
-    border: 1px solid;
-    font-size: 12px;
-    line-height: 1.16;
-  }
   .medium {
     padding: 8px 20px;
   }
 
   .outline {
-    @include baseButton;
+    @include baseButtonMobile;
   }
   .outlineDark {
-    @include baseButton;
+    @include baseButtonMobile;
   }
 }
