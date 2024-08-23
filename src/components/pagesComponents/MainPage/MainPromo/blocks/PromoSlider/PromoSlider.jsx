@@ -30,13 +30,16 @@ export const PromoSlider = () => {
     };
   }, [clickTrigger]);
 
-  return isMobile ? (
-    <PromoSliderMobile
-      activeIndex={activeIndex}
-      handleControlClick={handleControlClick}
-      totalButtons={totalButtons}
-    />
-  ) : (
+  if (isMobile) {
+    return (
+      <PromoSliderMobile
+        activeIndex={activeIndex}
+        handleControlClick={handleControlClick}
+        totalButtons={totalButtons}
+      />
+    );
+  }
+  return (
     <PromoSliderDesktop
       activeIndex={activeIndex}
       handleControlClick={handleControlClick}

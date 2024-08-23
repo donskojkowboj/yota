@@ -11,24 +11,21 @@ export const PromoSliderMobile = ({
   activeIndex,
 }) => {
   const { isSmallMobile } = useWindowSize();
-  const translateXSmall = `translateX(calc(-${activeIndex * 341}px - ${activeIndex * 6}px))`;
-  const translateX = `translateX(calc(-${activeIndex * 100}% - ${activeIndex * 6}px))`;
+
+  const handleResizing = () => {
+    const translateXSmall = `translateX(calc(-${activeIndex * 341}px - ${activeIndex * 6}px))`;
+    const translateX = `translateX(calc(-${activeIndex * 100}% - ${activeIndex * 6}px))`;
+
+    if (isSmallMobile) {
+      return translateXSmall;
+    }
+    return translateX;
+  };
 
   return (
     <>
       <div className={styles.carousel}>
-        <div
-          className={styles.inner}
-          style={
-            isSmallMobile
-              ? {
-                  transform: translateXSmall,
-                }
-              : {
-                  transform: translateX,
-                }
-          }
-        >
+        <div className={styles.inner} style={{ transform: handleResizing() }}>
           {[...Array(totalButtons)].map((_, index) => (
             <Card
               key={index}

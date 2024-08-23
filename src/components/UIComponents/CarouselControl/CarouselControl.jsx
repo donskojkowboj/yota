@@ -10,5 +10,6 @@ export const CarouselControl = ({ variant = 'clear', onClick }) => {
     }
   };
   const carouselControlClassname = `${styles.control} ${createCarouselControlVariant()}`;
+
   return <div onClick={onClick} className={carouselControlClassname}></div>;
 };
