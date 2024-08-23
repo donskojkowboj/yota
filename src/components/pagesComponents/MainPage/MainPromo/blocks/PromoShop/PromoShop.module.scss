@@ -1,3 +1,19 @@
 .netShop {
   grid-area: shop;
 }
+
+@media (max-width: 1024px) {
+  .netShop {
+    padding: 10px 33px 24px 33px;
+  }
+}
+
+@media (max-width: 960px) {
+  .netShop {
+    padding: 20px;
+    align-items: center;
+    &__btn {
+      width: 50%;
+    }
+  }
+}

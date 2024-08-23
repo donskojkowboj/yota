@@ -1,38 +1,49 @@
-import { Button } from '../../../../../UIComponents/Button';
-import { CarouselControl } from '../../../../../UIComponents/CarouselControl';
-import { Card, commonCardStyles } from '../../../../../UIComponents/Card';
-import styles from './PromoSlider.module.scss';
+import { useWindowSize } from '../../../../../../hooks/useWindowSize.js';
+import { PromoSliderDesktop } from './components/PromoSliderDesktop';
+import { PromoSliderMobile } from './components/PromoSliderMobile';
+import { useEffect, useState } from 'react';
 
 export const PromoSlider = () => {
-  const promoSliderTitle = `${commonCardStyles.title} ${commonCardStyles.title__big} ${commonCardStyles.title__white}`;
-  const promoSliderDescription = `${commonCardStyles.description} ${commonCardStyles.description__big} ${commonCardStyles.description__white}`;
+  const { isMobile } = useWindowSize();
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [clickTrigger, setClickTrigger] = useState(0);
+  const totalButtons = 5;
 
+  const handleSlideChange = () => {
+    setActiveIndex((prev) => {
+      if (prev === totalButtons - 1) {
+        return 0;
+      }
+      return prev + 1;
+    });
+  };
+
+  const handleControlClick = (index) => {
+    setActiveIndex(index);
+    setClickTrigger((prev) => prev + 1);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(handleSlideChange, 4000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [clickTrigger]);
+
+  if (isMobile) {
+    return (
+      <PromoSliderMobile
+        activeIndex={activeIndex}
+        handleControlClick={handleControlClick}
+        totalButtons={totalButtons}
+      />
+    );
+  }
   return (
-    <Card variant="blue" additionalClassname={styles.promoSlider}>
-      <div className={styles.promoSlider__wrapper}>
-        <div className={styles.promoSlider__innerWrapper}>
-          <div className={styles.promoSlider__textWrapper}>
-            <h2 className={promoSliderTitle}>Семейный конструктор</h2>
-            <div className={promoSliderDescription}>
-              Выгода до 15% за объединение номеров в группу
-            </div>
-          </div>
-
-          <Button variant="white">Заказать SIM-карту</Button>
-        </div>
-        <img
-          className={styles.promoSlider__img}
-          src="/src/assets/images/promo-simcards.png"
-          alt="promo"
-        />
-      </div>
-      <div className={styles.promoSlider__carouselButtons}>
-        <CarouselControl variant="active" />
-        <CarouselControl />
-        <CarouselControl />
-        <CarouselControl />
-        <CarouselControl />
-      </div>
-    </Card>
+    <PromoSliderDesktop
+      activeIndex={activeIndex}
+      handleControlClick={handleControlClick}
+      totalButtons={totalButtons}
+    />
   );
 };

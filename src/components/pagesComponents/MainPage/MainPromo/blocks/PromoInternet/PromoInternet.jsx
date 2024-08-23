@@ -1,3 +1,4 @@
+import { useWindowSize } from '../../../../../../hooks/useWindowSize.js';
 import {
   Card,
   commonCardStyles,
@@ -7,6 +8,7 @@ import commonStyles from '../../MainPromo.module.scss';
 import styles from './PromoInternet.module.scss';
 
 export const PromoInternet = () => {
+  const { isMobile } = useWindowSize();
   return (
     <Card variant="grey" additionalClassname={styles.internet}>
       <img
@@ -20,8 +22,11 @@ export const PromoInternet = () => {
           4G интернет. Для дома, для офиса, для поездок.
         </div>
       </div>
-      <Button additionalClassname={commonCardStyles.btn} variant="outline">
-        Перейти
+      <Button
+        additionalClassname={`${commonCardStyles.btn} ${commonCardStyles.btn__maxWidth}`}
+        variant="outline"
+      >
+        {isMobile ? 'Перейти в чат' : 'Выбрать'}
       </Button>
     </Card>
   );

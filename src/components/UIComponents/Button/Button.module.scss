@@ -8,6 +8,12 @@
   line-height: 1.37;
 }
 
+@mixin baseButtonMobile {
+  border: 1px solid;
+  font-size: 12px;
+  line-height: 1.16;
+}
+
 .button {
   background-color: transparent;
   border: none;
@@ -75,5 +81,18 @@
     background-color: $btn-outlineDark-bg-hover;
     color: $btn-outlineDark-hover;
     border-color: $btn-outlineDark-hover;
+  }
+}
+
+@media (max-width: 960px) {
+  .medium {
+    padding: 8px 20px;
+  }
+
+  .outline {
+    @include baseButtonMobile;
+  }
+  .outlineDark {
+    @include baseButtonMobile;
   }
 }

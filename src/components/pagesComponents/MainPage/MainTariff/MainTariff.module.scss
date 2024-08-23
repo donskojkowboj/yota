@@ -22,3 +22,33 @@
   justify-content: center;
   gap: 32px;
 }
+
+@media (max-width: 1024px) {
+  .mainTariffContainer {
+    max-width: 644px;
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 1.12;
+  }
+
+  .cardsWrapper {
+    margin-top: 40px;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 960px) {
+  .title {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .cardsWrapper {
+    margin-top: 30px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+  }
+}

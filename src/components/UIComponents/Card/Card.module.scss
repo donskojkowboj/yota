@@ -31,3 +31,18 @@
 .horizontal {
   height: 100%;
 }
+
+@media (max-width: 1024px) {
+  .card {
+    position: relative;
+    padding: 40px;
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 960px) {
+  .card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+}

@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -19,5 +20,29 @@
     margin-right: -20px;
     width: 270px;
     height: 270px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .chooseTariff {
+    &__img {
+      width: 187px;
+      height: 187px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .chooseTariff {
+    flex-direction: column-reverse;
+    gap: 12px;
+    &__wrapper {
+      gap: 12px;
+    }
+    &__img {
+      margin-top: -20px;
+      margin-right: 0;
+      width: 100px;
+    }
   }
 }

@@ -1,0 +1,72 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  gap: 6px;
+  position: relative;
+  transition: transform 1s ease;
+  width: 100%;
+}
+.carouselButtons {
+  position: absolute;
+  display: flex;
+  gap: 6px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.promoSlider {
+  margin-top: 40px;
+  width: 100%;
+  flex: 0 0 100%;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__innerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__img {
+    max-width: 356px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .promoSlider {
+    padding: 25px 12px 43px 38px;
+    &__wrapper {
+      max-height: 182px;
+    }
+    &__textWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    &__img {
+      max-width: 307px;
+      height: 220px;
+      margin-top: -20px;
+    }
+    &__btn {
+      height: 40px;
+      width: 226px;
+      padding: unset;
+    }
+  }
+}

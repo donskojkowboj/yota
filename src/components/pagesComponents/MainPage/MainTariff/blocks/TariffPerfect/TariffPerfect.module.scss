@@ -3,7 +3,6 @@
 .perfectTariff {
   padding: 24px;
   width: 324px;
-  height: 404px;
   gap: 40px;
 }
 
@@ -89,22 +88,6 @@
   line-height: 1.37;
 }
 
-.btn {
-  svg path,
-  circle {
-    transition: all 0.3s ease-in-out;
-  }
-
-  &:hover {
-    svg path {
-      fill: $text-color-descr;
-    }
-    circle {
-      fill: $btn-outline-bg-hover;
-    }
-  }
-}
-
 .info {
   position: absolute;
   padding: 16px;
@@ -116,4 +99,138 @@
   position: relative;
   transform: translateX(-10px);
   padding: 10px;
+}
+
+@media (max-width: 1024px) {
+  .perfectTariff {
+    width: 293px;
+    gap: 20px;
+  }
+
+  .textContainer {
+    display: flex;
+    font-size: 12px;
+  }
+
+  .messengers {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .calls {
+    display: flex;
+    gap: 10px;
+    max-width: 150px;
+  }
+
+  .freeCalls {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .optimal {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .package {
+    line-height: 1.16;
+  }
+
+  .blueNumber {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.8px;
+  }
+
+  .sum {
+    gap: 3px;
+    font-size: 32px;
+    line-height: 1.31;
+  }
+  .ruble {
+    margin-top: 5px;
+  }
+
+  .info {
+    position: absolute;
+    padding: 16px;
+    top: 0;
+    right: 0;
+  }
+
+  .question {
+    position: relative;
+    transform: translateX(-10px);
+    padding: 10px;
+  }
+}
+
+@media (max-width: 960px) {
+  .title {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  .wrapper {
+    gap: 8px;
+  }
+
+  .perfectTariff {
+    width: 225px;
+    height: 342px;
+    gap: 16px;
+  }
+
+  .textContainer {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .blueNumber {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .calls {
+    font-size: 12px;
+    max-height: 28px;
+    line-height: 1.16;
+    max-width: 100%;
+  }
+
+  .freeCalls {
+    font-size: 12px;
+  }
+
+  .optimal {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .sum {
+    line-height: 1.25;
+  }
+
+  .info {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .question {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .btn {
+    width: 82px;
+    height: 30px;
+    font-size: 12px;
+  }
 }

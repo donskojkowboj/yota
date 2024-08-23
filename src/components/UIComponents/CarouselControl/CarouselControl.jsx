@@ -9,6 +9,7 @@ export const CarouselControl = ({ variant = 'clear', onClick }) => {
         return '';
     }
   };
-  const carouselControlClassname = `${styles.control} ${createCarouselControlVariant()} `;
-  return <div className={carouselControlClassname}></div>;
+  const carouselControlClassname = `${styles.control} ${createCarouselControlVariant()}`;
+
+  return <div onClick={onClick} className={carouselControlClassname}></div>;
 };

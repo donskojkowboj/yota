@@ -1,3 +1,15 @@
 .internet {
   grid-area: internet;
 }
+
+@media (max-width: 1024px) {
+  .internet {
+    padding: 10px 33px 24px 33px;
+  }
+}
+
+@media (max-width: 960px) {
+  .internet {
+    padding: 20px;
+  }
+}

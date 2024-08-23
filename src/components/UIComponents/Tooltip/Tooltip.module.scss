@@ -33,3 +33,12 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .tooltip {
+    &__text {
+      left: -100%;
+      transform: translateX(-50%);
+    }
+  }
+}

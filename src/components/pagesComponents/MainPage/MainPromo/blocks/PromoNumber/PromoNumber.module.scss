@@ -1,3 +1,32 @@
 .ownNumber {
   grid-area: number;
 }
+
+@media (max-width: 1024px) {
+  .ownNumber {
+    padding: 10px 33px 24px 33px;
+  }
+}
+
+@media (max-width: 960px) {
+  .ownNumber {
+    padding: 20px;
+    &__img {
+      width: 130px;
+      margin-top: -20px;
+    }
+    &__btn {
+      align-self: center;
+      width: 50%;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+    }
+    &__descr {
+      display: block;
+      font-size: 12px;
+    }
+  }
+}
